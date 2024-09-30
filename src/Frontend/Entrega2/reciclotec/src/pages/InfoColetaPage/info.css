@@ -1,0 +1,32 @@
+
+.info-img {
+    flex: 1 1 17rem;
+}
+
+.info-text {
+    flex: 1 1 17rem;
+}
+
+.info-text h2 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.info-text p {
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+
+.info-text ul {
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.5rem;
+}
+
+.info-text ul li {
+    margin-bottom: 0.5rem;
+    list-style-type: disc;
+}
+
+.img_info {
+    width: 100%;
+}
