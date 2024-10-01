@@ -15,6 +15,7 @@ export default class AgendamentoColeta extends Usuario {
         this.dataAgendada = dataAgendada; 
     }
 
+    // Metodo para confirmar agendamento
     confirmarAgendamento() {
         console.log(`Agendamento confirmado para ${this.nome}.`);
         console.log(`Endereço: ${this.endereco}, ${this.numero}, ${this.complemento}, ${this.bairro}, ${this.cidade} - ${this.uf}, CEP: ${this.cep}`);

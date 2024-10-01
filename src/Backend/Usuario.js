@@ -6,7 +6,7 @@ export default class Usuario {
         this.telefone = telefone;
         this.senha = senha;
     }
-
+// Metodo para visualizar perfil
     visualizarPerfil() {
         console.log(`Nome: ${this.nome}`);
         console.log(`CPF: ${this.cpf}`);
@@ -14,6 +14,7 @@ export default class Usuario {
         console.log(`Telefone: ${this.telefone}`);
     }
 
+    // Metodo para validar Login
     validarLogin(email, senha) {
         if (this.email === email && this.senha === senha) {
             return true;
