@@ -30,11 +30,9 @@
   <a> Feito por: <a> <a href="https://www.linkedin.com/in/alexandra-christine-silva-590092257">Alexandra Christine </a>, <a href="https://linkedin.com/in/hebert-/">Hebert dos Reis Esteves	</a>, <a href="https://www.linkedin.com/in/gabrielly-cintra/">Gabrielly Cintra de Jesus	</a>,<a href="https://www.linkedin.com/in/jos%C3%A9-almeida-80063a256/">José Bento Almeida Gama </a>.
 
 
-O aumento da temperatura dos oceanos é uma ameaça grave para a biodiversidade marinha e a sustentabilidade dos ecossistemas costeiros. Nesse contexto, propomos implementar um sistema de monitoramento integrado, utilizando tecnologia IoT (Internet das Coisas), que compreende o Arduino, um sensor DS18B20 para temperatura e um Sensor de Turbidez para Monitoramento de Qualidade da Água.
+O lixo eletrônico, que inclui dispositivos como computadores e celulares, apresenta sérios riscos ao meio ambiente e à saúde humana devido à presença de substâncias tóxicas, como metais pesados. O descarte inadequado desses materiais pode contaminar o solo e a água, afetando comunidades e a biodiversidade local. Além disso, a reciclagem e reutilização desses resíduos são essenciais para a economia circular, reduzindo a necessidade de novos recursos e promovendo a sustentabilidade.
 
-Esse sistema permitirá avaliar a saúde dos ecossistemas marinhos ao fornecer dados precisos e em tempo real sobre a temperatura e a qualidade da água em regiões críticas, como próximas a recifes de coral. Os dados serão transmitidos para um banco de dados Firebase, que estará conectado a um aplicativo mobile desenvolvido no Flutter Flow. Esse aplicativo permitirá que os usuários visualizem e compreendam as variações de temperatura e turbidez da água de forma acessível.
-
-Além de fornecer informações cruciais para a conservação marinha sustentável, o projeto visa promover a conscientização sobre a importância da preservação dos ecossistemas marinhos. Esperamos que esses dados influenciem positivamente políticas públicas e práticas de conservação ambiental para proteger o meio ambiente costeiro e garantir a sustentabilidade dos recursos marinhos no Brasil.
+Nesse cenário, o site ReCicloTec se destaca como uma plataforma crucial para facilitar o descarte responsável de lixo eletrônico. Ele oferece informações sobre locais de coleta e serviços de reciclagem, além de promover a conscientização sobre os perigos e benefícios do correto descarte. Com conteúdos educativos e um mapa interativo, o ReCicloTec empodera a população, incentivando mudanças de comportamento e uma comunidade mais engajada em práticas sustentáveis. Desse modo, o site contribui significativamente para um futuro mais saudável e responsável.
 
 
 
