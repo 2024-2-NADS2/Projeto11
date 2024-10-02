@@ -27,8 +27,7 @@
 
 <p align="center">
 <img src="![projeto](https://github.com/2024-1-NADS1-A/Projeto9/assets/108402431/77769b33-ea85-45f6-8d60-2b78828086df)" border="0">
-  <a> Feito por: <a> <a href="https://www.linkedin.com/in/alexandra-christine-silva-590092257">Alexandra Christine </a>, <a href="https://linkedin.com/in/hebert-/">Hebert dos Reis Esteves	</a>, <a href="https://www.linkedin.com/in/karoline-lemos-540461296/">Karoline Lemos Avelar	</a>, <a href="https://www.linkedin.com/in/matheus-santos-morais/">Matheus Santos Morais	</a>.
-</p>
+  <a> Feito por: <a> <a href="https://www.linkedin.com/in/alexandra-christine-silva-590092257">Alexandra Christine </a>, <a href="https://linkedin.com/in/hebert-/">Hebert dos Reis Esteves	</a>, <a href="https://www.linkedin.com/in/gabrielly-cintra/">Gabrielly Cintra de Jesus	</a>,<a href="https://www.linkedin.com/in/jos%C3%A9-almeida-80063a256/">José Bento Almeida Gama </a>.
 
 
 O aumento da temperatura dos oceanos é uma ameaça grave para a biodiversidade marinha e a sustentabilidade dos ecossistemas costeiros. Nesse contexto, propomos implementar um sistema de monitoramento integrado, utilizando tecnologia IoT (Internet das Coisas), que compreende o Arduino, um sensor DS18B20 para temperatura e um Sensor de Turbidez para Monitoramento de Qualidade da Água.
