@@ -97,7 +97,20 @@ Há também 4 pastas que seguem da seguinte forma:
  * 0.8.8 - 02/10/2024
        * CONCLUÍDO: Desenvolvimento da Home Page (HTML/CSS/JS) (Todos)
  * 0.9.9 - 02/10/2024
-       * CONCLUÍDO: Parceria com a ONG Ecobraz
+       * CONCLUÍDO: Parceria com a ONG Ecobraz (Gabrielly)
+ * 0.10.10 - 20/11/2024
+       * ANDAMENTO:  Frontend em React (Todos)
+ * 0.11.11 - 20/11/2024
+       * ANDAMENTO: Backend em .NET, orientando a objetos com banco de dados (Todos)
+* 0.12.12 - 20/11/2024
+       * ANDAMENTO: Projeto de arquitetura da implementação do sistema (Todos)
+ * 0.13.13 - 20/11/2024
+       * ANDAMENTO: Implementar um algoritmo de busca de dados com ao menos duas prioridades (Todos)
+ * 0.14.14 - 20/11/2024
+       * ANDAMENTO: Implementar um algoritmo de busca de dados com uma prioridade (Todos)
+ * 0.15.15 - 22/11/2024
+       * ANDAMENTO: Entrega do projeto (Todos) 
+
  
 
 ## 📋 Licença/License
