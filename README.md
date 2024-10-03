@@ -19,7 +19,7 @@
   <a> Feito por<a> <a href="https://www.een-portugal.pt/news/PublishingImages/ODS.jpg?Width=500">Objetivos de Desenvolvimento Sustentável (ODS)</a>
 </p>
 
-<br> sobre o projeto. </br>
+<br> O projeto ReCicloTec é uma iniciativa que busca melhorar a gestão de lixo eletrônico por meio de uma plataforma digital. Ele aborda problemas como o descarte inadequado, falta de conscientização, infraestrutura insuficiente e desafios regulatórios. A plataforma oferece recursos educativos para aumentar a conscientização sobre a importância do descarte correto, além de otimizar a logística de coleta e reciclagem dos eletrônicos. Também informa sobre legislações pertinentes, ajudando a garantir a conformidade. Além disso, busca engajar a comunidade em torno da sustentabilidade, promovendo parcerias e campanhas que incentivem práticas responsáveis. A ReCicloTec visa, assim, contribuir para um futuro mais sustentável na gestão de resíduos eletrônicos. </br>
 
 ## 🔎 Descrição
 ![projeto](https://github.com/2024-1-NADS1-A/Projeto9/assets/108402431/77769b33-ea85-45f6-8d60-2b78828086df)
@@ -230,13 +230,12 @@ https://dl.espressif.com/dl/package_esp32_index.json
 
 Aqui estão as referências usadas no projeto.
 
-1. MSC (Marine Stewardship Council). Oceanos em risco: Alterações climáticas e pesca. Disponível em: https://tinyurl.com/2nb87ddw Acesso em: 25 abr.2024.
-2. CNN Brasil. Aquecimento dos oceanos está em níveis recordes há um ano; entenda o risco. Disponível em: https://tinyurl.com/4f4377f3.Acesso em: 25 abr. 2024.
-3. Como usar um Sensor de Nível de Água. Disponível em: https://tinyurl.com/4a77w3kx. Acesso em: 25 abr. 2024.
-4. Maretório: o impacto da maré nos territórios de comunidades costeiras. Disponível em: https://tinyurl.com/4htym3nc. Acesso em: 25 abr. 2024.
-5. Efeitos do aquecimento global ameaçam vida marinha. Disponível em: https://tinyurl.com/bdcfmnnr. Acesso em: 25 abr. 2024.
-6. Paulo Horta et a. Mudanças Climáticas e a zona costeira do Brasil: vulnerabilidades socioambientais e estratégias de ação. Vol.11.3, dez/2020. Disponível em: https://tinyurl.com/mrxezh7w. Acesso em: 25 abr. 2024.
-7. Random Nerd Tutorials. ESP32 with DS18B20 Temperature Sensor using Arduino IDE. Disponível em: https://randomnerdtutorials.com/esp32-ds18b20-temperature-arduino-ide/. Acesso em: 22 maio 2024.
-8. Blog da Robótica. Como utilizar o módulo sensor de turbidez de partículas suspensas na água com Arduino. Disponível em: https://www.blogdarobotica.com/2023/01/10/como-utilizar-o-modulo-sensor-de-turbidez-de-particulas-suspensas-na-agua-com-arduino/. Acesso em: 22 maio 2024.
-9. TFK IoT Blog. Send DHT11 Sensor Data to Firebase. Disponível em: https://tfkiot.blogspot.com/2023/12/send-dht11-sensor-data-to-firebase.html. Acesso em: 22 maio 2024.
-10. TFK IoT GitHub. Esp32-Esp8266_Send_DHT11_Data_To_FireStore. Disponível em: https://github.com/tfkiot/Esp32-Esp8266_Send_DHT11_Data_To_FireStore/tree/main. Acesso em: 22 maio 2024.
+1. 
+2.
+3. 
+4.
+5.
+7. 
+8. 
+9. 
+10. 
