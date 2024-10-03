@@ -66,19 +66,10 @@ Há também 4 pastas que seguem da seguinte forma:
 - ``Java Script``
 - ``Node.js``
 
-## 📖 Requisitos
-![equipamentos](https://github.com/2024-1-NADS1-A/Projeto9/assets/108402431/1d33c70f-3e62-4414-8b26-f7d5601d1520)
+## 📖 Figma
+<br>🛠Link para o figma e guia de estilo</br>
+<br> <a href="https://www.figma.com/design/PH0VUWEN0xLxdPUShb7VVi/Untitled?node-id=0-1&t=5Had1jGuUzH7mpMt-1">Clique aqui para ver</a></br>
 
-<br>🛠 Hardware</br>
- <br>•	ESP32</br>
- <br>•	Sensor de temperatura DS18B20</br>
- <br>•	Sensor de turbidez</br>
- <br>•	Protoboard e Jumpers</br>
- <br>•	Conexão Wi-Fi</br>
-<br>💻 Software:</br>
- <br>•	Arduino IDE</br>
- <br>•	Conta no Firebase (para transmissão de dados)</br>
- <br>•	Conta no Flutter Flow (para visualização dos dados)</br>
 
 ## 🛠 Instalação Arduino IDE
 
