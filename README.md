@@ -201,15 +201,25 @@ https://dl.espressif.com/dl/package_esp32_index.json
 
 
 ## 🗃 Histórico de lançamentos
-
-* 0.2.1 - 30/09/2024
-    * MUDANÇA: Correção no Bug da turbidez  (Hebert)
-* 0.2.0 - 21/05/2024
-    * MUDANÇA: Compra da caixa organizadora (Alexandra)
-* 0.1.1 - 23/05/2024
-    * CONCLUÍDO: Atualização da Pesquisa de Extensão (Matheus e Karoline)
-* 0.1.0 - 24/05/2024
-    * CONCLUÍDO: Criação do README (Hebert e Alexandra)
+* 0.1.1 - 23/08/2024
+   * CONCLUÍDO: Pesquisa de extensão (Gabrielly)
+* 0.2.2 - 28/09/2024
+    * CONCLUÍDO: Criação de Casos de Uso (Hebert)
+* 0.3.3 - 02/10/2024
+    * CONCLUÍDO: Criação do Layout e Prototipação no Figma (Alexandra )
+* 0.4.4 - 02/10/2024
+    * CONCLUÍDO: Entrega de Classes (José e Gabrielly)
+* 0.5.5 - 02/10/2024
+    * CONCLUÍDO: Documento de Requisitos Funcionais, Não Funcionais e 3 Casos de Uso (Hebert e José)
+* 0.6.6- 02/10/2024 
+   * CONCLUÍDO: Desenvolvimento do Site em React (Hebert)
+* 0.7.7 - 02/10/2024
+      * CONCLUÍDO: Criação do guia de estilo (Alexandra e Gabrielly)
+ * 0.8.8 - 02/10/2024
+       * CONCLUÍDO: Desenvolvimento da Home Page (HTML/CSS/JS) (Todos)
+ * 0.9.9 - 02/10/2024
+       * CONCLUÍDO: Parceria com a ONG Ecobraz
+ 
 
 ## 📋 Licença/License
 
