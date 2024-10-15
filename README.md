@@ -22,7 +22,7 @@
 <br> O projeto ReCicloTec é uma iniciativa que busca melhorar a gestão de lixo eletrônico por meio de uma plataforma digital. Ele aborda problemas como o descarte inadequado, falta de conscientização, infraestrutura insuficiente e desafios regulatórios. A plataforma oferece recursos educativos para aumentar a conscientização sobre a importância do descarte correto, além de otimizar a logística de coleta e reciclagem dos eletrônicos. Também informa sobre legislações pertinentes, ajudando a garantir a conformidade. Além disso, busca engajar a comunidade em torno da sustentabilidade, promovendo parcerias e campanhas que incentivem práticas responsáveis. A ReCicloTec visa, assim, contribuir para um futuro mais sustentável na gestão de resíduos eletrônicos. </br>
 
 ## 🔎 Descrição
-![projeto](https://github.com/2024-1-NADS1-A/Projeto9/assets/108402431/77769b33-ea85-45f6-8d60-2b78828086df)
+![projeto]()
 
 
 <p align="center">
@@ -63,15 +63,45 @@ Há também 4 pastas que seguem da seguinte forma:
 
 - ``HTML``
 - ``CSS``
-- ``Java Script``
+- ``JavaScript``
+- ``React``
 - ``Node.js``
+- ``MySQL``
+
 
 ## 📖 Figma
-<br>🛠Link para o figma e guia de estilo</br>
+<br> 🛠 Link para o figma e guia de estilo</br>
 <br> <a href="https://www.figma.com/design/PH0VUWEN0xLxdPUShb7VVi/Untitled?node-id=0-1&t=5Had1jGuUzH7mpMt-1">Clique aqui para ver</a></br>
 
 
-## 🛠 
+## 🛠 Instalação do Vite com React
+
+• Instale o Node.js a partir do site oficial: [Node.js](https://nodejs.org/).
+
+• No terminal, execute o comando para criar um novo projeto Vite com React:
+
+```sh
+npm create vite@latest reciclotec -- --template react
+````
+
+• Entre no diretório do projeto:
+```sh
+cd reciclotec
+````
+
+• Instale as dependências do projeto:
+```sh
+npm install
+````
+
+⚙ Configuração do Projeto
+
+• Inicie o servidor de desenvolvimento com o comando:
+```sh
+npm run dev
+````
+
+• O projeto será aberto na seguinte URL: http://localhost:5173.
 ## 💻 
 ## ⚙C
 ## ⚙
@@ -83,33 +113,39 @@ Há também 4 pastas que seguem da seguinte forma:
 * 0.1.1 - 23/08/2024
    * CONCLUÍDO: Pesquisa de extensão (Gabrielly)
 * 0.2.2 - 28/09/2024
-    * CONCLUÍDO: Criação de Casos de Uso (Hebert)
+   * CONCLUÍDO: Criação de Casos de Uso (Hebert)
 * 0.3.3 - 02/10/2024
-    * CONCLUÍDO: Criação do Layout e Prototipação no Figma (Alexandra )
+   * CONCLUÍDO: Criação do Layout e Prototipação no Figma (Alexandra)
 * 0.4.4 - 02/10/2024
-    * CONCLUÍDO: Entrega de Classes (José e Gabrielly)
+   * CONCLUÍDO: Entrega de Classes (José e Gabrielly)
 * 0.5.5 - 02/10/2024
-    * CONCLUÍDO: Documento de Requisitos Funcionais, Não Funcionais e 3 Casos de Uso (Hebert e José)
-* 0.6.6- 02/10/2024 
+   * CONCLUÍDO: Documento de Requisitos Funcionais, Não Funcionais e 3 Casos de Uso (Hebert e José)
+* 0.6.6 - 02/10/2024
    * CONCLUÍDO: Desenvolvimento do Site em React (Hebert)
 * 0.7.7 - 02/10/2024
-      * CONCLUÍDO: Criação do guia de estilo (Alexandra e Gabrielly)
- * 0.8.8 - 02/10/2024
-       * CONCLUÍDO: Desenvolvimento da Home Page (HTML/CSS/JS) (Todos)
- * 0.9.9 - 02/10/2024
-       * CONCLUÍDO: Parceria com a ONG Ecobraz (Gabrielly)
- * 0.10.10 - 20/11/2024
-       * ANDAMENTO:  Frontend em React (Todos)
- * 0.11.11 - 20/11/2024
-       * ANDAMENTO: Backend em .NET, orientando a objetos com banco de dados (Todos)
-* 0.12.12 - 20/11/2024
-       * ANDAMENTO: Projeto de arquitetura da implementação do sistema (Todos)
- * 0.13.13 - 20/11/2024
-       * ANDAMENTO: Implementar um algoritmo de busca de dados com ao menos duas prioridades (Todos)
- * 0.14.14 - 20/11/2024
-       * ANDAMENTO: Implementar um algoritmo de busca de dados com uma prioridade (Todos)
- * 0.15.15 - 22/11/2024
-       * ANDAMENTO: Entrega do projeto (Todos) 
+   * CONCLUÍDO: Criação do guia de estilo (Alexandra e Gabrielly)
+* 0.8.8 - 02/10/2024
+   * CONCLUÍDO: Desenvolvimento da Home Page (HTML/CSS/JS) (Todos)
+* 0.9.9 - 02/10/2024
+   * CONCLUÍDO: Parceria com a ONG Ecobraz (Gabrielly)
+* 0.10.10 - 17/10/2024
+   * ANDAMENTO: Criar o Banco de Dados (Hebert)
+* 0.11.11 - 27/10/2024
+   * ANDAMENTO: Incluir um sistema de autenticação (Login e Senha) (Hebert)
+* 0.12.12 - 27/10/2024
+   * ANDAMENTO: Diagrama de Classe (Hebert e José)
+* 0.13.13 - 27/10/2024
+   * ANDAMENTO: Fazer as Telas restantes em React para Entrega 3 (Alexandra, Gabrielly e José)
+* 0.14.14 - 06/11/2024
+   * ANDAMENTO: Terminar o site em React para Entrega 4 (Alexandra, Gabrielly e José)
+* 0.15.15 - 17/11/2024
+   * ANDAMENTO: Backend em .NET, orientado a objetos com banco de dados (Hebert e José)
+* 0.16.16 - 17/11/2024
+   * ANDAMENTO: Subida do backend para Azure (Gabrielly e Alexandra)
+* 0.17.17 - 18/11/2024
+   * ANDAMENTO: Entrega do projeto (Todos)
+
+
 
  
 
