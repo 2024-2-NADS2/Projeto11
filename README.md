@@ -6,7 +6,7 @@
 
 # Projeto Baseado nos Objetivos de Desenvolvimento Sustentável para controlar e monitorar o descarte de lixo eletrônicos.
 
-## ReCicloTec
+## ♻️ReCicloTec♻️
 
 ## Integrantes: <a href="https://www.linkedin.com/in/alexandra-christine-silva-590092257">Alexandra Christine </a>, <a href="https://linkedin.com/in/hebert-/">Hebert dos Reis Esteves	</a>, <a href="https://www.linkedin.com/in/jos%C3%A9-almeida-80063a256/">José Bento Almeida Gama </a>, <a href="https://www.linkedin.com/in/gabrielly-cintra/">Gabrielly Cintra de Jesus	</a>.
 
@@ -73,6 +73,7 @@ Há também 4 pastas que seguem da seguinte forma:
 <br> 🛠 Link para o figma e guia de estilo</br>
 <br> <a href="https://www.figma.com/design/PH0VUWEN0xLxdPUShb7VVi/Untitled?node-id=0-1&t=5Had1jGuUzH7mpMt-1">Clique aqui para ver</a></br>
 
+## 🖥️ Requisitos do sistema 
 
 ## 🛠 Instalação do Vite com React
 
