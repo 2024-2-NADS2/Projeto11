@@ -1,10 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../CadastroPage/cadastro.css';
 import cadastroPhoto from '../../assets/img/lixologo.png';
 import wave from '../../assets/img/wave1.jpg';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 
 const CadastroPage = () => {
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const inputs = document.querySelectorAll(".input");
@@ -34,6 +38,38 @@ const CadastroPage = () => {
         };
     }, []);
 
+    const [nome, setNome] = useState('');
+    const [cpf, setCpf] = useState('');
+    const [email, setEmail] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [senha, setSenha] = useState('');
+    function handleSubmit(event) {
+        event.preventDefault();
+        axios.post('http://localhost:3000/cadastro', {nome, cpf, email, telefone, senha})
+            .then(res => {
+                console.log(res);
+                if (res.status === 200 || res.status === 201) {
+                    // Login bem-sucedido
+                    console.log("Cadastro bem-sucedido");
+                    navigate('/login');
+                }
+            })
+            .catch(err => {
+                if (err.response) {
+                    if (err.response.status === 401) {
+                        window.alert('Usuário já cadastrado ou dados incorretos.');
+                    } else if (err.response.status === 400) {
+                        window.alert('Dados incompletos ou inválidos.');
+                    } else {
+                        window.alert('Ocorreu um erro. Tente novamente mais tarde.');
+                    }
+                } else {
+                    console.log(err);
+                    window.alert('Erro de conexão. Tente novamente mais tarde.');
+                }
+            });
+    }
+
     return (
         <>
             <img className="wave_cadastro" src={wave} alt="Background wave" />
@@ -42,7 +78,7 @@ const CadastroPage = () => {
                     <img src={cadastroPhoto} alt="Logo ReCicloTec" />
                 </div>
                 <div className="cadastro_content">
-                    <form action="cadastro.html">
+                    <form onSubmit={handleSubmit}>
                         <h2 className="logo_cadastro"><i className='bx bx-recycle'></i> ReCicloTec</h2>
                         <h3>Cadastre-se</h3>
                         
@@ -52,7 +88,7 @@ const CadastroPage = () => {
                             </div>
                             <div className="div">
                                 <h5>Nome</h5>
-                                <input type="text" className="input" required />
+                                <input type="text" className="input" required onChange={e => setNome(e.target.value)} />
                             </div>
                         </div>
                         
@@ -62,7 +98,7 @@ const CadastroPage = () => {
                             </div>
                             <div className="div">
                                 <h5>CPF</h5>
-                                <input type="text" className="input" maxLength="11" required />
+                                <input type="text" className="input" maxLength="11" required onChange={e => setCpf(e.target.value)}/>
                             </div>
                         </div>
         
@@ -72,7 +108,7 @@ const CadastroPage = () => {
                             </div>
                             <div className="div">
                                 <h5>Email</h5>
-                                <input type="email" className="input" required />
+                                <input type="email" className="input" required onChange={e => setEmail(e.target.value)}/>
                             </div>
                         </div>
         
@@ -82,7 +118,7 @@ const CadastroPage = () => {
                             </div>
                             <div className="div">
                                 <h5>Telefone</h5>
-                                <input type="tel" className="input" required />
+                                <input type="tel" className="input" required onChange={e => setTelefone(e.target.value)}/>
                             </div>
                         </div>
         
@@ -92,7 +128,7 @@ const CadastroPage = () => {
                             </div>
                             <div className="div">
                                 <h5>Senha</h5>
-                                <input type="password" className="input" required />
+                                <input type="password" className="input" required onChange={e => setSenha(e.target.value)}/>
                             </div>
                         </div>
         
