@@ -12,11 +12,11 @@ const FooterPage = () => {
                         <a href="#"><i className="bx bxl-youtube"></i></a>
                     </div>
                     <div className="links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms Of Use</a>
-                        <a href="#">Our Company</a>
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Termos de Uso</a>
+                        <a href="#">Nossa Empresa</a>
                     </div>
-                    <p>&#169; ReCicloTec All Right Reserved.</p>
+                    <p>&#169; ReCicloTec Todos os Direitos Reservados.</p>
                 </footer>
             </section>
         </div>
