@@ -7,6 +7,48 @@ export default class Usuario {
         this.senha = senha;
     }
 
+    // Gets
+    getNome() {
+        return this.nome;
+    }
+
+    getCpf() {
+        return this.cpf;
+    }
+
+    getEmail() {
+        return this.email;
+    }
+
+    getTelefone() {
+        return this.telefone;
+    }
+
+    getSenha() {
+        return this.senha;
+    }
+
+    // Sets
+    setNome(nome) {
+        this.nome = nome;
+    }
+
+    setCpf(cpf) {
+        this.cpf = cpf;
+    }
+
+    setEmail(email) {
+        this.email = email;
+    }
+
+    setTelefone(telefone) {
+        this.telefone = telefone;
+    }
+
+    setSenha(senha) {
+        this.senha = senha;
+    }
+
     visualizarPerfil() {
         console.log(`Nome: ${this.nome}`);
         console.log(`CPF: ${this.cpf}`);

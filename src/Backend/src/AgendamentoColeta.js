@@ -15,6 +15,88 @@ export default class AgendamentoColeta extends Usuario {
         this.dataAgendada = dataAgendada; 
     }
 
+     // Gets
+     getCep() {
+        return this.cep;
+    }
+
+    getUf() {
+        return this.uf;
+    }
+
+    getCidade() {
+        return this.cidade;
+    }
+
+    getEndereco() {
+        return this.endereco;
+    }
+
+    getNumero() {
+        return this.numero;
+    }
+
+    getComplemento() {
+        return this.complemento;
+    }
+
+    getBairro() {
+        return this.bairro;
+    }
+
+    getPontoColeta() {
+        return this.pontoColeta;
+    }
+
+    getProduto() {
+        return this.produto;
+    }
+
+    getDataAgendada() {
+        return this.dataAgendada;
+    }
+
+    // Sets
+    setCep(cep) {
+        this.cep = cep;
+    }
+
+    setUf(uf) {
+        this.uf = uf;
+    }
+
+    setCidade(cidade) {
+        this.cidade = cidade;
+    }
+
+    setEndereco(endereco) {
+        this.endereco = endereco;
+    }
+
+    setNumero(numero) {
+        this.numero = numero;
+    }
+
+    setComplemento(complemento) {
+        this.complemento = complemento;
+    }
+
+    setBairro(bairro) {
+        this.bairro = bairro;
+    }
+
+    setPontoColeta(pontoColeta) {
+        this.pontoColeta = pontoColeta;
+    }
+
+    setProduto(produto) {
+        this.produto = produto;
+    }
+
+    setDataAgendada(dataAgendada) {
+        this.dataAgendada = dataAgendada;
+    }
+
     confirmarAgendamento() {
         console.log(`Agendamento confirmado para ${this.nome}.`);
         console.log(`Endereço: ${this.endereco}, ${this.numero}, ${this.complemento}, ${this.bairro}, ${this.cidade} - ${this.uf}, CEP: ${this.cep}`);
