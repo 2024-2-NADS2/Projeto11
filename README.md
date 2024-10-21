@@ -41,8 +41,6 @@ Nesse cenário, o site ReCicloTec se destaca como uma plataforma crucial para fa
 -Raiz<br>
 |<br>
 |-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|Projeto+de+extensão+-+Grupo+°cean_atualizado_com_sensor de turbidez.docx<br>
 |-->imagens<br>
 |-->src<br>
   &emsp;|-->Backend<br>
@@ -129,10 +127,10 @@ npm run dev
    * CONCLUÍDO: Desenvolvimento da Home Page (HTML/CSS/JS) (Todos)
 * 0.9.9 - 02/10/2024
    * CONCLUÍDO: Parceria com a ONG Ecobraz (Gabrielly)
-* 0.10.10 - 17/10/2024
-   * ANDAMENTO: Criar o Banco de Dados (Hebert)
+* 0.10.10 - 19/10/2024
+   * CONCLUÍDO: Criar o Banco de Dados (Hebert)
 * 0.11.11 - 27/10/2024
-   * ANDAMENTO: Incluir um sistema de autenticação (Login e Senha) (Hebert)
+   * CONCLUÍDO: Incluir um sistema de autenticação (Login e Senha) (Hebert)
 * 0.12.12 - 27/10/2024
    * ANDAMENTO: Diagrama de Classe (Hebert e José)
 * 0.13.13 - 27/10/2024
