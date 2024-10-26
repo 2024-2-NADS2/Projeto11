@@ -73,14 +73,14 @@ Há também 4 pastas que seguem da seguinte forma:
 
 ## 🖥️ Requisitos do sistema 
 
-## 🛠 Instalação do Vite com React
+## 🛠 Instalação do React
 
 • Instale o Node.js a partir do site oficial: [Node.js](https://nodejs.org/).
 
-• No terminal, execute o comando para criar um novo projeto Vite com React:
+• No terminal, execute o comando para criar um novo projetoReact:
 
 ```sh
-npm create vite@latest reciclotec -- --template react
+npx create-react-app reciclotec
 ````
 
 • Entre no diretório do projeto:
@@ -90,17 +90,22 @@ cd reciclotec
 
 • Instale as dependências do projeto:
 ```sh
-npm install
+npm install react-router-dom
+````
+
+```sh
+npm install axios
 ````
 
 ⚙ Configuração do Projeto
 
 • Inicie o servidor de desenvolvimento com o comando:
 ```sh
-npm run dev
+npm start
 ````
 
-• O projeto será aberto na seguinte URL: http://localhost:5173.
+• O projeto será aberto na seguinte URL: http://localhost:3001.
+
 ## 💻 
 ## ⚙C
 ## ⚙
