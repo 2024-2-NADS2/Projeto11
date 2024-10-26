@@ -1,4 +1,4 @@
-export default class Usuario { 
+class Usuario { 
     constructor(nome, cpf, email, telefone, senha) {
         this.nome = nome;
         this.cpf = cpf;
@@ -64,3 +64,5 @@ export default class Usuario {
         }
     }
 }
+
+module.exports = Usuario;

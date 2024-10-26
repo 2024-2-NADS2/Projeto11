@@ -5,6 +5,8 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
+const Usuario = require('./Usuario.js');
+
 app.use(express.json());
 app.use(cors());
 
@@ -44,9 +46,10 @@ app.post('/login', (req, res) => {
             return res.status(401).json("Usuário não encontrado.");
         }
 
-        // Comparando a senha com o hash armazenado
         const user = result[0];
-        bcrypt.compare(senha, user.senha, (err, senhaCorreta) => {
+        const usuario = new Usuario(user.nome, user.cpf, user.email, user.telefone, user.senha);
+
+        bcrypt.compare(senha, usuario.getSenha(), (err, senhaCorreta) => {
             if (err) {
                 return res.status(500).json("Erro ao verificar a senha.");
             }
@@ -84,8 +87,10 @@ app.post('/cadastro', (req, res) => {
                 return res.status(500).json("Erro ao hashear a senha.");
             }
 
-            // Agora, inserimos o novo usuário no banco de dados
-            db.query(sqlInserir, [nome, cpf, email, telefone, hash], (erro, resultado) => {
+        const usuario = new Usuario(nome, cpf, email, telefone, hash);
+
+            // Inserir novo usuário no banco de dados
+            db.query(sqlInserir, [usuario.getNome(), usuario.getCpf(), usuario.getEmail(), usuario.getTelefone(), usuario.getSenha()], (erro, resultado) => {
                 if (erro) {
                     return res.status(500).json("Erro ao registrar o usuário.");
                 }
