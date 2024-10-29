@@ -6,6 +6,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const Usuario = require('./Usuario.js');
+const AgendamentoColeta = require('./AgendamentoColeta.js');
 
 app.use(express.json());
 app.use(cors());
@@ -26,6 +27,8 @@ db.connect((err) => {
     }
 });
 
+
+// Rota para realizar o login consultando no banco de dados
 app.post('/login', (req, res) => {
     const sql = "SELECT * FROM usuarios WHERE email = ?";
     const { email, senha } = req.body;
@@ -64,7 +67,7 @@ app.post('/login', (req, res) => {
     });
 });
 
-
+// Rota para cadastrar no banco de dados
 app.post('/cadastro', (req, res) => {
     const sqlInserir = "INSERT INTO usuarios (nome, cpf, email, telefone, senha) VALUES (?, ?, ?, ?, ?)";
     const sqlVerificar = "SELECT * FROM usuarios WHERE email = ? OR cpf = ?";
@@ -99,6 +102,46 @@ app.post('/cadastro', (req, res) => {
             });
         });
     });
+});
+
+
+// Rota para cadastrar agendamento da coleta no banco de dados
+app.post('/agendamentoColeta', (req, res) => {
+    const sqlInserirAgendamento = `
+        INSERT INTO agendamento (nome, cpf, email, telefone, cep, uf, cidade, endereco, numero, complemento, bairro, pontoColeta, produto, dataAgendada) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `;
+
+    const { nome, cpf, email, telefone, cep, uf, cidade, endereco, numero, complemento, bairro, pontoColeta, produto, dataAgendada } = req.body;
+
+    // Validação de entrada
+    if (!nome || !cpf || !email || !telefone || !cep || !uf || !cidade || !endereco || !numero || !bairro || !pontoColeta || !produto || !dataAgendada) {
+        return res.status(400).json("Por favor, preencha todos os campos.");
+    }
+
+    // Instancia o agendamento com os dados recebidos
+    const agendamento = new AgendamentoColeta(nome, cpf, email, telefone, cep, uf, cidade, endereco, numero, complemento, bairro, pontoColeta, produto, dataAgendada);
+
+    agendamento.confirmarAgendamento();
+
+    // Inserir novo agendamento no banco de dados
+    db.query(
+        sqlInserirAgendamento,
+        [
+            agendamento.getNome(), agendamento.getCpf(), agendamento.getEmail(), agendamento.getTelefone(),
+            agendamento.getCep(), agendamento.getUf(), agendamento.getCidade(), agendamento.getEndereco(),
+            agendamento.getNumero(), agendamento.getComplemento(), agendamento.getBairro(),
+            agendamento.getPontoColeta(), agendamento.getProduto(), agendamento.getDataAgendada()
+        ],
+        (erro, resultado) => {
+            if (erro) {
+                console.error("Erro ao registrar o agendamento:", erro);
+                return res.status(500).json("Erro ao registrar o agendamento.");
+            }
+
+            return res.status(201).json("Agendamento registrado com sucesso.");
+        }
+    );
 });
 
 
