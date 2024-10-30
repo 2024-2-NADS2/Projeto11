@@ -107,7 +107,10 @@ npm start
 • O projeto será aberto na seguinte URL: http://localhost:3001.
 
 ## 💻 Servidor Backend NodeJs - CodeSandBox
-• https://codesandbox.io/p/devbox/reciclotec-mtrwdw
+🔗 https://codesandbox.io/p/devbox/reciclotec-mtrwdw
+
+## 💻 Aplicativo React - Hospedado no Netlify
+🔗 https://reciclotec.netlify.app/
 
 ## ⚙C
 ## ⚙
