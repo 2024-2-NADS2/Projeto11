@@ -1,10 +1,10 @@
-// Administrador.js (Classe que herda de Usuario)
 const Usuario = require('./Usuario.js');
 
+// Classe Administrador é uma herança da classe Usuario
 class Administrador extends Usuario {
     constructor(id, nome, email, senha, permissao) {
         super(id, nome, email, senha);
-        this.permissao = permissao; // Atributo extra para diferenciar o administrador
+        this.permissao = permissao; 
     }
 
     // Get
