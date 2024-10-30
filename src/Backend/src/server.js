@@ -1,5 +1,3 @@
-// CODIGO PARA MYSQL
-
 const express = require('express');
 const mysql = require('mysql2');
 const bcrypt = require('bcrypt');
@@ -149,6 +147,38 @@ app.post('/agendamentoColeta', (req, res) => {
             return res.status(201).json("Agendamento registrado com sucesso.");
         }
     );
+});
+
+
+// Rota para buscar um usuário ou agendamento com base em uma propriedade - Algoritmo de Busca de Dados com Proriedade Específica
+app.get('/buscar', (req, res) => {
+  const { tipo, propriedade, valor } = req.query; // tipo = tabelas do banco de dados, propriedades = colunas do banco de dados, valor = atributo para realizar a busca
+
+  if (!tipo || !propriedade || !valor) {
+      return res.status(400).json("Por favor, forneça tipo, propriedade e valor para a busca.");
+  }
+
+  let sql;
+  if (tipo === 'usuarios') {
+      sql = `SELECT * FROM usuarios WHERE ?? = ?`; // 
+  } else if (tipo === 'agendamentos') {
+      sql = `SELECT * FROM agendamento WHERE ?? = ?`;
+  } else {
+      return res.status(400).json("Tipo inválido. Use 'usuarios' ou 'agendamentos'.");
+  }
+
+  // Executa a query de busca
+  db.query(sql, [propriedade, valor], (err, results) => {
+      if (err) {
+          return res.status(500).json("Erro ao consultar o banco de dados.");
+      }
+
+      if (results.length === 0) {
+          return res.status(404).json("Nenhum item encontrado.");
+      }
+
+      return res.status(200).json(results);
+  });
 });
 
 
