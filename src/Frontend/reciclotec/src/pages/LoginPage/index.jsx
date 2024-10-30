@@ -39,9 +39,10 @@ const LoginPage = () => {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+    let url = 'https://mtrwdw-3000.csb.app';
     function handleSubmit(event) {
         event.preventDefault();
-        axios.post('http://localhost:3000/login', {email, senha})
+        axios.post(`${url}/login`, {email, senha})
             .then(res => {
                 if (res.status === 200) {
                     // Login bem-sucedido

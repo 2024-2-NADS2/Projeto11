@@ -43,9 +43,10 @@ const CadastroPage = () => {
     const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');
     const [senha, setSenha] = useState('');
+    let url = 'https://mtrwdw-3000.csb.app';
     function handleSubmit(event) {
         event.preventDefault();
-        axios.post('http://localhost:3000/cadastro', {nome, cpf, email, telefone, senha})
+        axios.post(`${url}/cadastro`, {nome, cpf, email, telefone, senha})
             .then(res => {
                 console.log(res);
                 if (res.status === 200 || res.status === 201) {
