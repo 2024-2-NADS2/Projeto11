@@ -4,6 +4,7 @@ import '../LoginPage/login.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+var url = 'https://mtrwdw-3000.csb.app';
 
 const LoginPage = () => {
 
@@ -39,7 +40,6 @@ const LoginPage = () => {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-    let url = 'https://mtrwdw-3000.csb.app';
     function handleSubmit(event) {
         event.preventDefault();
         axios.post(`${url}/login`, {email, senha})

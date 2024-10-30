@@ -4,6 +4,7 @@ import cadastroPhoto from '../../assets/img/lixologo.png';
 import wave from '../../assets/img/wave1.jpg';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+var url = 'https://mtrwdw-3000.csb.app';
 
 
 const CadastroPage = () => {
@@ -43,7 +44,6 @@ const CadastroPage = () => {
     const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');
     const [senha, setSenha] = useState('');
-    let url = 'https://mtrwdw-3000.csb.app';
     function handleSubmit(event) {
         event.preventDefault();
         axios.post(`${url}/cadastro`, {nome, cpf, email, telefone, senha})
