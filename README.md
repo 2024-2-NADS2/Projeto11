@@ -142,15 +142,15 @@ npm start
 * 0.11.11 - 27/10/2024
    * CONCLUÍDO: Incluir um sistema de autenticação (Login e Senha) (Hebert)
 * 0.12.12 - 27/10/2024
-   * ANDAMENTO: Diagrama de Classe (Hebert e José)
+   * CONCLUÍDO: Diagrama de Classe (Hebert e José)
 * 0.13.13 - 27/10/2024
-   * ANDAMENTO: Fazer as Telas restantes em React para Entrega 3 (Alexandra, Gabrielly e José)
+   * CONCLUÍDO: Fazer as Telas restantes em React para Entrega 3 (Alexandra, Gabrielly e José)
 * 0.14.14 - 06/11/2024
    * ANDAMENTO: Terminar o site em React para Entrega 4 (Alexandra, Gabrielly e José)
 * 0.15.15 - 17/11/2024
    * ANDAMENTO: Backend em .NET, orientado a objetos com banco de dados (Hebert e José)
 * 0.16.16 - 17/11/2024
-   * ANDAMENTO: Subida do backend para Azure (Gabrielly e Alexandra)
+   * CONCLUÍDO: Subida do backend para Azure (Todos)
 * 0.17.17 - 18/11/2024
    * ANDAMENTO: Entrega do projeto (Todos)
 
