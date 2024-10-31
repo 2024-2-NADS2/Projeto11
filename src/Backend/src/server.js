@@ -38,7 +38,7 @@ app.post('/login', (req, res) => {
     const sql = "SELECT * FROM usuarios WHERE email = ?";
     const { email, senha } = req.body;
 
-    // Validação de entrada (opcional, mas recomendado)
+    // Validação de entrada, para que todos os campos sejam preenchidos
     if (!email || !senha) {
         return res.status(400).json("Por favor, forneça email e senha.");
     }
@@ -66,7 +66,7 @@ app.post('/login', (req, res) => {
                 return res.status(401).json("Senha incorreta.");
             }
 
-            // Sucesso no login
+            // Login foi realizado corretamente
             return res.status(200).json("Login bem-sucedido.");
         });
     });
@@ -89,7 +89,7 @@ app.post('/cadastro', (req, res) => {
             return res.status(400).json("Email ou CPF já cadastrados.");
         }
 
-        // Se não houver duplicação, geramos o hash da senha
+        // Se não houver duplicação, é gerado o hash da senha
         bcrypt.hash(senha, 10, (erro, hash) => {
             if (erro) {
                 return res.status(500).json("Erro ao hashear a senha.");
@@ -119,7 +119,7 @@ app.post('/agendamentoColeta', (req, res) => {
 
     const { nome, cpf, email, telefone, cep, uf, cidade, endereco, numero, complemento, bairro, pontoColeta, produto, dataAgendada } = req.body;
 
-    // Validação de entrada
+    // Validação de entrada, para que todos os campos sejam preenchidos
     if (!nome || !cpf || !email || !telefone || !cep || !uf || !cidade || !endereco || !numero || !bairro || !pontoColeta || !produto || !dataAgendada) {
         return res.status(400).json("Por favor, preencha todos os campos.");
     }
@@ -160,7 +160,7 @@ app.get('/buscar', (req, res) => {
 
   let sql;
   if (tipo === 'usuarios') {
-      sql = `SELECT * FROM usuarios WHERE ?? = ?`; // 
+      sql = `SELECT * FROM usuarios WHERE ?? = ?`; 
   } else if (tipo === 'agendamentos') {
       sql = `SELECT * FROM agendamento WHERE ?? = ?`;
   } else {
