@@ -1,16 +1,17 @@
 const Usuario = require('./Usuario.js');
 
 class AgendamentoColeta extends Usuario {
-    constructor(nome, cpf, email, telefone, cep, uf, cidade, endereco, numero, complemento, bairro, pontoColeta, produto, dataAgendada) {
+    constructor(nome, cpf, email, telefone, cep, uf, cidade, estado, endereco, numero, complemento, bairro, ong, produto, dataAgendada) {
         super(nome, cpf, email, telefone);
         this.cep = cep;
         this.uf = uf;
         this.cidade = cidade;
+        this.estado = estado; 
         this.endereco = endereco;
         this.numero = numero;
         this.complemento = complemento;
         this.bairro = bairro;
-        this.pontoColeta = pontoColeta;
+        this.ong = ong;
         this.produto = produto;
         this.dataAgendada = dataAgendada;
         this.dataColetada = null;
@@ -29,76 +30,85 @@ class AgendamentoColeta extends Usuario {
         return this.cidade; 
     }
 
-    getEndereco() { 
-        return this.endereco; 
+    getEstado() {
+         return this.estado; 
+    } 
+
+    getEndereco() {
+         return this.endereco; 
     }
 
-    getNumero() { 
-        return this.numero; 
+    getNumero() {
+         return this.numero; 
     }
 
-    getComplemento() { 
-        return this.complemento; 
+    getComplemento() {
+         return this.complemento; 
     }
 
-    getBairro() { 
-        return this.bairro; 
+    getBairro() {
+         return this.bairro; 
     }
 
-    getPontoColeta() {
-         return this.pontoColeta; 
+    getOng() {
+         return this.ong; 
     }
 
-    getProduto() { 
-        return this.produto; 
+    getProduto() {
+         return this.produto; 
     }
 
-    getDataAgendada() { 
-        return this.dataAgendada; 
+    getDataAgendada() {
+         return this.dataAgendada; 
     }
 
-    getDataColetada() { 
-        return this.dataColetada; 
+    getDataColetada() {
+         return this.dataColetada; 
     }
 
     // Métodos Set
-    setCep(cep) { 
-        this.cep = cep; 
+    setCep(cep) {
+         this.cep = cep; 
     }
 
-    setUf(uf) { 
-        this.uf = uf; 
+    setUf(uf) {
+         this.uf = uf; 
     }
 
-    setCidade(cidade) { 
-        this.cidade = cidade; 
+    setCidade(cidade) {
+         this.cidade = cidade; 
     }
 
-    setEndereco(endereco) { 
-        this.endereco = endereco; 
+    setEstado(estado) {
+         this.estado = estado; 
+    } 
+
+    setEndereco(endereco) {
+         this.endereco = endereco; 
     }
 
-    setNumero(numero) { 
-        this.numero = numero; 
+    setNumero(numero) {
+         this.numero = numero; 
     }
 
-    setComplemento(complemento) { 
-        this.complemento = complemento; 
-    }
-    setBairro(bairro) { 
-        this.bairro = bairro; 
+    setComplemento(complemento) {
+         this.complemento = complemento; 
     }
 
-    setPontoColeta(pontoColeta) { 
-        this.pontoColeta = pontoColeta; 
+    setBairro(bairro) {
+         this.bairro = bairro; 
     }
 
-    setProduto(produto) { 
-        this.produto = produto; 
+    setOng(ong) {
+         this.ong = ong; 
     }
 
-    setDataAgendada(dataAgendada) { 
-        this.dataAgendada = dataAgendada; 
+    setProduto(produto) {
+         this.produto = produto; 
+    }
+
+    setDataAgendada(dataAgendada) {
+         this.dataAgendada = dataAgendada; 
     }
 
     setDataColetada(dataColetada) { 
@@ -114,13 +124,15 @@ class AgendamentoColeta extends Usuario {
             cep: this.getCep(),
             uf: this.getUf(),
             cidade: this.getCidade(),
+            estado: this.getEstado(),
             endereco: this.getEndereco(),
             numero: this.getNumero(),
             complemento: this.getComplemento(),
             bairro: this.getBairro(),
-            pontoColeta: this.getPontoColeta(),
+            ong: this.getOng(),
             produto: this.getProduto(),
-            dataAgendada: this.getDataAgendada()
+            dataAgendada: this.getDataAgendada(),
+            dataColetada: this.getDataColetada()
         });
     }
 }
