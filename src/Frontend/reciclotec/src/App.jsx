@@ -10,6 +10,7 @@ import Navbar from "./components/NavBar";
 import LoginPage from "./pages/LoginPage";
 import CadastroPage from "./pages/CadastroPage";
 import { Routes, Route } from 'react-router-dom';
+import ProdutoPage from "./pages/ProdutoPage";
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
             <Routes>
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/cadastro" element={<CadastroPage />} />
+                <Route path="/produto" element={<ProdutoPage />} />
 
                 <Route 
                     path="/" 

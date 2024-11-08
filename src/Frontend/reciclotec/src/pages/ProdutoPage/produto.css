@@ -1,0 +1,104 @@
+.wave_login {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.container_login {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem;
+    padding: 0 2rem;
+    align-items: center; 
+}
+
+.login_content {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    text-align: left;
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+.produto_titulo {
+    text-align: center;
+}
+
+form {
+    width: 100%; 
+}
+
+.img_login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 150px; 
+}
+
+.img_login img {
+    width: 300px;
+}
+
+.login_content img {
+    height: 100px;
+}
+
+.logo_login {
+    margin: 15px 0;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 2.9rem;
+}
+
+.btn_login_custom {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background: var(--green-color);
+    background-size: 200%;
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.p_login {
+    font-weight: 600; 
+}
+
+.p_login,
+#cadastro_login {
+    display: inline;
+    text-align: left;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: .3s;
+}
+
+#cadastro_login:hover {
+    color: var(--green-color);
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: var(--text-color);
+}
