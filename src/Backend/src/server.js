@@ -115,23 +115,23 @@ app.post('/agendamentoColeta', (req, res) => {
     const { nome, cpf, email, telefone, cep, uf, cidade, estado, endereco, numero, complemento, bairro, ong, produtos, dataAgendada } = req.body;
 
     // Verifica se todos os campos estão preenchidos
-    if (!nome || !cpf || !email || !telefone || !cep || !uf || !cidade || !endereco || !numero || !bairro || !ong || !produtos || !dataAgendada) {
+    if (!nome || !cpf || !email || !telefone || !cep || !uf || !cidade  || !estado || !endereco || !numero || !bairro || !ong || !produtos || !dataAgendada) {
         return res.status(400).json("Por favor, preencha todos os campos.");
     }
 
     const agendamento = new AgendamentoColeta( nome, cpf, email, telefone, cep, uf, cidade, estado, endereco, numero,complemento, bairro, ong, produtos.join(', '), dataAgendada);
 
     agendamento.confirmarAgendamento();
-    
+
     const sqlInserirAgendamento = `
-        INSERT INTO agendamento (nome, cpf, email, telefone, cep, uf, cidade, endereco, numero, complemento, bairro, pontoColeta, produto, dataAgendada) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO agendamento (nome, cpf, email, telefone, cep, uf, cidade, estado, endereco, numero, complemento, bairro, ong, produto, dataAgendada) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
 
     db.query(
         sqlInserirAgendamento,
         [
-            agendamento.getNome(), agendamento.getCpf(), agendamento.getEmail(), agendamento.getTelefone(), agendamento.getCep(), agendamento.getUf(), agendamento.getCidade(), agendamento.getEndereco(), agendamento.getNumero(),agendamento.getComplemento(), agendamento.getBairro(), agendamento.getOng(), agendamento.getProduto(),agendamento.getDataAgendada()
+            agendamento.getNome(), agendamento.getCpf(), agendamento.getEmail(), agendamento.getTelefone(), agendamento.getCep(), agendamento.getUf(), agendamento.getCidade(), agendamento.getEstado(), agendamento.getEndereco(), agendamento.getNumero(),agendamento.getComplemento(), agendamento.getBairro(), agendamento.getOng(), agendamento.getProduto(),agendamento.getDataAgendada()
         ],
         (erro, resultado) => {
             if (erro) {
