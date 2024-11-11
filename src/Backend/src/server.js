@@ -112,42 +112,37 @@ app.post('/cadastro', (req, res) => {
 
 // Rota para cadastrar agendamento da coleta no banco de dados
 app.post('/agendamentoColeta', (req, res) => {
+    const { nome, cpf, email, telefone, cep, uf, cidade, estado, endereco, numero, complemento, bairro, ong, produtos, dataAgendada } = req.body;
+
+    // Verifica se todos os campos estão preenchidos
+    if (!nome || !cpf || !email || !telefone || !cep || !uf || !cidade || !endereco || !numero || !bairro || !ong || !produtos || !dataAgendada) {
+        return res.status(400).json("Por favor, preencha todos os campos.");
+    }
+
+    const agendamento = new AgendamentoColeta( nome, cpf, email, telefone, cep, uf, cidade, estado, endereco, numero,complemento, bairro, ong, produtos.join(', '), dataAgendada);
+
+    agendamento.confirmarAgendamento();
+    
     const sqlInserirAgendamento = `
         INSERT INTO agendamento (nome, cpf, email, telefone, cep, uf, cidade, endereco, numero, complemento, bairro, pontoColeta, produto, dataAgendada) 
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
 
-    const { nome, cpf, email, telefone, cep, uf, cidade, endereco, numero, complemento, bairro, pontoColeta, produto, dataAgendada } = req.body;
-
-    // Validação de entrada, para que todos os campos sejam preenchidos
-    if (!nome || !cpf || !email || !telefone || !cep || !uf || !cidade || !endereco || !numero || !bairro || !pontoColeta || !produto || !dataAgendada) {
-        return res.status(400).json("Por favor, preencha todos os campos.");
-    }
-
-    // Instancia o agendamento com os dados recebidos
-    const agendamento = new AgendamentoColeta(nome, cpf, email, telefone, cep, uf, cidade, endereco, numero, complemento, bairro, pontoColeta, produto, dataAgendada);
-
-    agendamento.confirmarAgendamento();
-
-    // Inserir novo agendamento no banco de dados
     db.query(
         sqlInserirAgendamento,
         [
-            agendamento.getNome(), agendamento.getCpf(), agendamento.getEmail(), agendamento.getTelefone(),
-            agendamento.getCep(), agendamento.getUf(), agendamento.getCidade(), agendamento.getEndereco(),
-            agendamento.getNumero(), agendamento.getComplemento(), agendamento.getBairro(),
-            agendamento.getPontoColeta(), agendamento.getProduto(), agendamento.getDataAgendada()
+            agendamento.getNome(), agendamento.getCpf(), agendamento.getEmail(), agendamento.getTelefone(), agendamento.getCep(), agendamento.getUf(), agendamento.getCidade(), agendamento.getEndereco(), agendamento.getNumero(),agendamento.getComplemento(), agendamento.getBairro(), agendamento.getOng(), agendamento.getProduto(),agendamento.getDataAgendada()
         ],
         (erro, resultado) => {
             if (erro) {
                 console.error("Erro ao registrar o agendamento:", erro);
                 return res.status(500).json("Erro ao registrar o agendamento.");
             }
-
             return res.status(201).json("Agendamento registrado com sucesso.");
         }
     );
 });
+
 
 
 // Rota para buscar um usuário ou agendamento com base em uma propriedade - Algoritmo de Busca de Dados com Proriedade Específica

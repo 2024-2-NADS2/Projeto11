@@ -8,13 +8,9 @@ const ProdutoPage = () => {
 
     const handleCheckboxChange = (e) => {
         const { value, checked } = e.target;
-        if (checked) {
-            setSelectedItems((prevItems) => [...prevItems, value]);
-        } else {
-            setSelectedItems((prevItems) =>
-                prevItems.filter((item) => item !== value)
-            );
-        }
+        setSelectedItems(prev => (
+            checked ? [...prev, value] : prev.filter(item => item !== value)
+        ));
     };
 
     const handleSubmit = (event) => {
