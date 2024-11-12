@@ -1,0 +1,204 @@
+/* Container Principal */
+.container_login {
+    height: 100vh;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.img_login {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_login img {
+    max-width: 90%;
+    height: auto;
+}
+
+/* Conteúdo do Formulário */
+.login_content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto
+}
+
+.coleta-form {
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: calc(100vh - 4rem);
+}
+
+.logo_login {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.coleta-subtitle {
+    color: #555;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Grid do Formulário */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+/* Inputs */
+.input-group input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    height: 50px;
+}
+
+.input-group input:focus {
+    border-color: #3CB815;
+    outline: none;
+    box-shadow: 0 0 8px rgba(60, 184, 21, 0.5);
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Botão */
+.btn_login_custom {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    background-color: #3CB815;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+}
+
+.btn_login_custom:hover {
+    background-color: #2f9010;
+}
+
+/* Mapa */
+.map-section {
+    width: 100%;
+    margin-top: auto;
+}
+
+.map-section h3 {
+    color: #555;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+#map {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+}
+
+#map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1200px) {
+    .container_login {
+        padding: 1.5rem;
+    }
+    
+    .coleta-form {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container_login {
+        grid-template-columns: 1fr;
+    }
+    
+    .img_login {
+        display: none;
+    }
+    
+    .coleta-form {
+        height: auto;
+        max-height: calc(100vh - 3rem);
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container_login {
+        padding: 1rem;
+    }
+    
+    .coleta-form {
+        padding: 1rem;
+    }
+    
+    .btn_login_custom {
+        max-width: 100%;
+    }
+}
+
+/* Estilo para o select de ONGs */
+.ong-select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    height: 50px;
+    background-color: white;
+}
+
+.ong-select:focus {
+    border-color: #3CB815;
+    outline: none;
+    box-shadow: 0 0 8px rgba(60, 184, 21, 0.5);
+}
+
+.ong-select option {
+    padding: 8px;
+    font-size: 0.9rem;
+}
