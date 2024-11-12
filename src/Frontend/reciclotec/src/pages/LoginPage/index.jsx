@@ -47,7 +47,7 @@ const LoginPage = () => {
                 if (res.status === 200) {
                     // Login bem-sucedido
                     console.log("Login bem-sucedido");
-                    navigate('/');
+                    navigate('/coleta');
                 }
             })
             .catch(err => {
