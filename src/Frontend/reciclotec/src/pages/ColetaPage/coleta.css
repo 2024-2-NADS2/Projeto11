@@ -202,3 +202,15 @@
     padding: 8px;
     font-size: 0.9rem;
 }
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: var(--text-color);
+}

@@ -4,6 +4,7 @@ import axios from 'axios';
 import wave from '../../assets/img/wave1.jpg';
 import loginPhoto from '../../assets/img/lixologo.png';
 import '../ColetaPage/coleta.css';
+var url = 'https://mtrwdw-3000.csb.app';
 
 const ColetaPage = () => {
     const navigate = useNavigate();
@@ -65,7 +66,7 @@ const ColetaPage = () => {
         };
         
         try {
-            await axios.post('http://localhost:3000/agendamentoColeta', formFinal, {
+            await axios.post(`${url}/agendamentoColeta`, formFinal, {
                 headers: { 'Content-Type': 'application/json' }
             });
 
