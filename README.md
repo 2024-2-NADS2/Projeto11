@@ -59,12 +59,7 @@ Há também 4 pastas que seguem da seguinte forma:
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
-- ``HTML``
-- ``CSS``
-- ``JavaScript``
-- ``React``
-- ``Node.js``
-- ``MySQL``
+
 
 
 ## 📖 Figma
@@ -72,7 +67,12 @@ Há também 4 pastas que seguem da seguinte forma:
 <br> <a href="https://www.figma.com/design/PH0VUWEN0xLxdPUShb7VVi/Untitled?node-id=0-1&t=5Had1jGuUzH7mpMt-1">Clique aqui para ver</a></br>
 
 ## 🖥️ Requisitos do sistema 
-
+- ``HTML``
+- ``CSS``
+- ``JavaScript``
+- ``React``
+- ``Node.js``
+- ``MySQL``
 ## 🛠 Instalação do React
 
 • Instale o Node.js a partir do site oficial: [Node.js](https://nodejs.org/).
