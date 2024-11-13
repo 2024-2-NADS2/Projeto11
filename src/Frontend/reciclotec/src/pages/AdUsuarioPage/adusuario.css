@@ -1,25 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-* {
-  font-family: 'Poppins', sans-serif; /* Aplica a fonte Poppins a todos os elementos */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  scroll-padding-top: 2rem;
-  scroll-behavior: smooth;
-}
-
-body {
+.admin-panel-body {
   display: flex;
   background-color: #ffffff;
 }
 
-.sidebar {
+.admin-panel-sidebar {
   width: 250px;
-    background-color: #46e641;
-   
+  background-color: #46e641;
   color: white;
   display: flex;
   flex-direction: column;
@@ -28,27 +16,27 @@ body {
   position: fixed;
 }
 
-.icon {
+.admin-panel-icon {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.icon-img {
+.admin-panel-icon-img {
   max-width: 100px;
   margin-bottom: 10px;
 }
 
-.sidebar h1 {
+.admin-panel-sidebar h1 {
   font-size: 15px;
   margin: 6px 0;
 }
 
-.menu {
+.admin-panel-menu {
   display: flex;
   flex-direction: column;
 }
 
-.menu a {
+.admin-panel-menu a {
   text-decoration: none;
   color: white;
   padding: 10px;
@@ -57,50 +45,46 @@ body {
   transition: background-color 0.3s;
 }
 
-.menu a:hover {
+.admin-panel-menu a:hover {
   background-color: #339913;
 }
 
-.main-content {
-  margin-left: 400px; /* Largura da barra lateral */
+.admin-panel-main-content {
+  margin-left: 400px;
   padding: 10px;
   flex-grow: 1;
-  
-  /* Configurações para centralizar o conteúdo */
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: flex-start; /* Alinha ao topo */
-  height: 100vh; /* Garante que o conteúdo ocupe toda a altura da janela */
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
 }
 
-.container {
+.admin-panel-container {
   background-color: #fffffff7;
   padding: 20px;
   width: 80%;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 900px; /* Limite a largura máxima */
+  max-width: 900px;
 }
 
-h2 {
+.admin-panel-h2 {
   color: #333;
   margin-bottom: 13px;
 }
 
-.form-group {
+.admin-panel-form-group {
   margin-bottom: 15px;
 }
 
-label {
+.admin-panel-label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-select {
+.admin-panel-input,
+.admin-panel-select {
   background-color: #fff;
   width: 110%;
   padding: 8px;
@@ -108,24 +92,24 @@ select {
   border-radius: 4px;
 }
 
-.access-profile {
+.admin-panel-access-profile {
   border: 1px solid #ddd;
   padding: 10px;
   margin-top: 30px;
   width: 40%;
 }
 
-.access-profile legend {
+.admin-panel-access-profile legend {
   font-weight: bold;
   color: #333;
 }
 
-.access-profile label {
+.admin-panel-access-profile label {
   display: flex;
   margin-bottom: 5px;
 }
 
-button {
+.admin-panel-button {
   background-color: #3CB815;
   color: #fff;
   padding: 10px 20px;
@@ -135,6 +119,6 @@ button {
   font-size: 16px;
 }
 
-button:hover {
+.admin-panel-button:hover {
   background-color: #339913;
 }
