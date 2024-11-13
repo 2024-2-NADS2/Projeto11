@@ -33,9 +33,7 @@ db.connect((err) => {
 });
 
 
-// Rota para realizar o login consultando no banco de dados
 app.post('/login', (req, res) => {
-    const sql = "SELECT * FROM usuarios WHERE email = ?";
     const { email, senha } = req.body;
 
     // Validação de entrada, para que todos os campos sejam preenchidos
@@ -43,31 +41,91 @@ app.post('/login', (req, res) => {
         return res.status(400).json("Por favor, forneça email e senha.");
     }
 
-    // Verificação do email
-    db.query(sql, [email], (err, result) => {
+    // Consultar a tabela administrador
+    const sqlAdmin = "SELECT * FROM administrador WHERE email = ?";
+    db.query(sqlAdmin, [email], (err, adminResult) => {
         if (err) {
             return res.status(500).json("Erro ao consultar o banco de dados.");
         }
 
-        // Verifica se o usuário existe
-        if (result.length === 0) {
-            return res.status(401).json("Usuário não encontrado.");
+        if (adminResult.length > 0) {
+            const admin = adminResult[0];
+
+            if (admin.permissao === 'admin' || admin.permissao === 'ong') {
+
+                bcrypt.compare(senha, admin.senha, (err, senhaCorreta) => {
+                    if (err) {
+                        return res.status(500).json("Erro ao verificar a senha.");
+                    }
+
+                    if (senhaCorreta) {
+                        return res.status(200).json("Login de administrador bem-sucedido.");
+                    } else {
+                        return res.status(401).json("Senha incorreta.");
+                    }
+                });
+                return;
+            }
         }
 
-        const user = result[0];
-        const usuario = new Usuario(user.nome, user.cpf, user.email, user.telefone, user.senha);
-
-        bcrypt.compare(senha, usuario.getSenha(), (err, senhaCorreta) => {
+        // Consulta na tabela usuarios caso não seja encontrado ou autorizado na tabela administrador
+        const sqlUser = "SELECT * FROM usuarios WHERE email = ?";
+        db.query(sqlUser, [email], (err, userResult) => {
             if (err) {
-                return res.status(500).json("Erro ao verificar a senha.");
+                return res.status(500).json("Erro ao consultar o banco de dados.");
             }
 
-            if (!senhaCorreta) {
-                return res.status(401).json("Senha incorreta.");
+            // Verifica se o usuário existe
+            if (userResult.length === 0) {
+                return res.status(401).json("Usuário não encontrado.");
             }
 
-            // Login foi realizado corretamente
-            return res.status(200).json("Login bem-sucedido.");
+            const user = userResult[0];
+            bcrypt.compare(senha, user.senha, (err, senhaCorreta) => {
+                if (err) {
+                    return res.status(500).json("Erro ao verificar a senha.");
+                }
+
+                if (senhaCorreta) {
+                    return res.status(200).json("Login de usuário bem-sucedido.");
+                } else {
+                    return res.status(401).json("Senha incorreta.");
+                }
+            });
+        });
+    });
+});
+
+app.post('/cadastro-administrador', (req, res) => {
+    const sqlInserirAdmin = "INSERT INTO administrador (nome, email, senha, empresa, permissao) VALUES (?, ?, ?, ?, ?)";
+    const sqlVerificarAdmin = "SELECT * FROM administrador WHERE email = ?";
+    const { nome, email, senha, empresa, permissao } = req.body;
+
+    if (!nome || !email || !senha || !empresa || !permissao) {
+        return res.status(400).json("Por favor, preencha todos os campos.");
+    }
+
+    db.query(sqlVerificarAdmin, [email], (erro, adminExistente) => {
+        if (erro) {
+            return res.status(500).json("Erro ao verificar o banco de dados.");
+        }
+
+        if (adminExistente.length > 0) {
+            return res.status(400).json("Email já cadastrado como administrador.");
+        }
+
+        bcrypt.hash(senha, 10, (erro, hash) => {
+            if (erro) {
+                return res.status(500).json("Erro ao hashear a senha.");
+            }
+
+            db.query(sqlInserirAdmin, [nome, email, hash, empresa, permissao], (erro, resultado) => {
+                if (erro) {
+                    return res.status(500).json("Erro ao registrar o administrador.");
+                }
+
+                return res.status(201).json("Administrador registrado com sucesso.");
+            });
         });
     });
 });
