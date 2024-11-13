@@ -34,15 +34,15 @@ db.connect((err) => {
 
 
 app.post('/login', (req, res) => {
+    const sqlAdmin = "SELECT * FROM administrador WHERE email = ?";
+    const sqlUser = "SELECT * FROM usuarios WHERE email = ?";
     const { email, senha } = req.body;
 
-    // Validação de entrada, para que todos os campos sejam preenchidos
     if (!email || !senha) {
         return res.status(400).json("Por favor, forneça email e senha.");
     }
 
-    // Consultar a tabela administrador
-    const sqlAdmin = "SELECT * FROM administrador WHERE email = ?";
+    // Primeiro, fazer a verificação se o email existe no banco de dados
     db.query(sqlAdmin, [email], (err, adminResult) => {
         if (err) {
             return res.status(500).json("Erro ao consultar o banco de dados.");
@@ -50,49 +50,42 @@ app.post('/login', (req, res) => {
 
         if (adminResult.length > 0) {
             const admin = adminResult[0];
-
-            if (admin.permissao === 'admin' || admin.permissao === 'ong') {
-
-                bcrypt.compare(senha, admin.senha, (err, senhaCorreta) => {
-                    if (err) {
-                        return res.status(500).json("Erro ao verificar a senha.");
-                    }
-
-                    if (senhaCorreta) {
-                        return res.status(200).json("Login de administrador bem-sucedido.");
-                    } else {
-                        return res.status(401).json("Senha incorreta.");
-                    }
-                });
-                return;
-            }
-        }
-
-        // Consulta na tabela usuarios caso não seja encontrado ou autorizado na tabela administrador
-        const sqlUser = "SELECT * FROM usuarios WHERE email = ?";
-        db.query(sqlUser, [email], (err, userResult) => {
-            if (err) {
-                return res.status(500).json("Erro ao consultar o banco de dados.");
-            }
-
-            // Verifica se o usuário existe
-            if (userResult.length === 0) {
-                return res.status(401).json("Usuário não encontrado.");
-            }
-
-            const user = userResult[0];
-            bcrypt.compare(senha, user.senha, (err, senhaCorreta) => {
+            bcrypt.compare(senha, admin.senha, (err, senhaCorreta) => {
                 if (err) {
                     return res.status(500).json("Erro ao verificar a senha.");
                 }
 
                 if (senhaCorreta) {
-                    return res.status(200).json("Login de usuário bem-sucedido.");
+                    return res.status(200).json({ message: "Login bem-sucedido", permissao: admin.permissao });
                 } else {
                     return res.status(401).json("Senha incorreta.");
                 }
             });
-        });
+        } else {
+            // Caso não seja administrador ou tenha permissao ong, consultar a tabela usuarios
+            db.query(sqlUser, [email], (err, userResult) => {
+                if (err) {
+                    return res.status(500).json("Erro ao consultar o banco de dados.");
+                }
+
+                if (userResult.length === 0) {
+                    return res.status(401).json("Usuário não encontrado.");
+                }
+
+                const user = userResult[0];
+                bcrypt.compare(senha, user.senha, (err, senhaCorreta) => {
+                    if (err) {
+                        return res.status(500).json("Erro ao verificar a senha.");
+                    }
+
+                    if (senhaCorreta) {
+                        return res.status(200).json({ message: "Login bem-sucedido", permissao: "usuario" });
+                    } else {
+                        return res.status(401).json("Senha incorreta.");
+                    }
+                });
+            });
+        }
     });
 });
 

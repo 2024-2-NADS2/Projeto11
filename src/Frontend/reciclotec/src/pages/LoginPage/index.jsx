@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 var url = 'https://mtrwdw-3000.csb.app';
 
+
 const LoginPage = () => {
 
     const navigate = useNavigate();
@@ -42,12 +43,15 @@ const LoginPage = () => {
     const [senha, setSenha] = useState('');
     function handleSubmit(event) {
         event.preventDefault();
-        axios.post(`${url}/login`, {email, senha})
+        axios.post(`${url}/login`, { email, senha })
             .then(res => {
                 if (res.status === 200) {
-                    // Login bem-sucedido
-                    console.log("Login bem-sucedido");
-                    navigate('/coleta');
+                    const permissao = res.data.permissao;
+                    if (permissao === 'admin' || permissao === 'ong') {
+                        navigate('/adminPage');
+                    } else {
+                        navigate('/coleta');
+                    }
                 }
             })
             .catch(err => {
