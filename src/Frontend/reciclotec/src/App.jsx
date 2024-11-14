@@ -12,6 +12,7 @@ import CadastroPage from "./pages/CadastroPage";
 import { Routes, Route } from 'react-router-dom';
 import ColetaPage from "./pages/ColetaPage";
 import AdUsuarioPage from "./pages/AdUsuarioPage";
+
 const App = () => {
     return (
         <div>
@@ -19,7 +20,7 @@ const App = () => {
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/cadastro" element={<CadastroPage />} />
                 <Route path="/coleta" element={<ColetaPage/>} />
-                <Route path="/adminPage" element={<AdUsuarioPage/>} />
+                <Route path="/adUsuario" element={<AdUsuarioPage/>} />
 
                 <Route 
                     path="/" 
