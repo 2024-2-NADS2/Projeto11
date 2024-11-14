@@ -13,6 +13,7 @@ import { Routes, Route } from 'react-router-dom';
 import ColetaPage from "./pages/ColetaPage";
 import AdUsuarioPage from "./pages/AdUsuarioPage";
 import OdsPage from "./pages/OdsPage";
+import AdAgendamentosPage from "./pages/AdAgendamentosPage";
 
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
                 <Route path="/cadastro" element={<CadastroPage />} />
                 <Route path="/coleta" element={<ColetaPage/>} />
                 <Route path="/adUsuario" element={<AdUsuarioPage/>} />
+                <Route path="/adAgendamentos" element={<AdAgendamentosPage/>} />
 
                 <Route 
                     path="/" 

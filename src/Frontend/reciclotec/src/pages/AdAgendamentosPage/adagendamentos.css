@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap);
+/* Variáveis exclusivas */
+:root {
+    --admin-bg-color: #f5f5f5;
+    --sidebar-bg-color: #3CB815;
+    --sidebar-text-color: #ffffff;
+    --sidebar-hover-color: #2a9112;
+    --font-family: 'Poppins', sans-serif;
+    --table-border-color: #3CB815;
+    --table-header-bg-color: #3CB815;
+    --table-header-text-color: #ffffff;
+    --button-delete-bg-color: #e74c3c;
+    
+    --button-configure-bg-color: #3498db;
+    --button-icon-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .admin-container {
+    display: flex;
+    font-family: var(--font-family);
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: var(--sidebar-bg-color);
+    color: var(--sidebar-text-color);
+    padding: 20px;
+  }
+  
+  .sidebar h1 {
+    margin-bottom: 10px;
+  }
+  
+  .logo {
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 15px;
+  }
+  
+  .menu a {
+    color: var(--sidebar-text-color);
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  
+  .menu a:hover {
+    background-color: var(--sidebar-hover-color);
+  }
+  
+ 
+
+  .content {
+    flex-grow: 1;
+    padding: 300px;
+    background-color: var(--admin-bg-color);
+    overflow-x: auto; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Garante que o conteúdo comece do topo */
+  }
+  
+  .appointments-section h2 {
+    margin-bottom: 1px;
+  }
+  
+  .appointments-table {
+    width: 142%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  
+    table-layout: auto;
+    
+  }
+  
+  .appointments-table th, .appointments-table td {
+    border: 2px solid var(--table-border-color);
+    padding: 20px; /* Ajustado para melhor visualização */
+    text-align: center;
+    align-items: center;
+    
+  }
+  
+  .appointments-table th {
+    background-color: var(--table-header-bg-color);
+    color: var(--table-header-text-color);
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .button-delete, .button-configure, .button-confirm {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--button-icon-color);
+  }
+  
+   .button-delete {
+    background-color: var(--button-delete-bg-color);
+  }
+  
+  
+  .button-confirm {
+    background-color: var(--sidebar-bg-color);
+    
+  }
+  
