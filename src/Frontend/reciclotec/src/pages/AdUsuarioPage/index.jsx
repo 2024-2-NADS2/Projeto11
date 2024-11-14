@@ -43,14 +43,13 @@ const AdUsuarioPage = () => {
         <div className="admin-panel-body">
             <div className="admin-panel-sidebar">
                 <div className="admin-panel-logo">
-                    <h1>RECICLOTEC</h1>
-                    <img className="admin-panel-icon" src={icon} alt="icon" />
+                    <h2 className="admin-panel-icon"><i className='bx bx-recycle'></i> ReCicloTec</h2>
                     <h1>Painel Administrativo</h1>
                 </div>
                 <nav className="admin-panel-menu">
                     <a href="/agendamento">Agendamentos</a>
-                    <a href="#usuarios">Usuários</a>
-                    <a href="#atualizar">Atualizar Perfil</a>
+                    <a href="/adUsuario">Cadastrar Usuários</a>
+                    <a href="/atUsuario">Atualizar Perfil</a>
                 </nav>
             </div>
 

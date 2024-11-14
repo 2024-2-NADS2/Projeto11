@@ -7,7 +7,7 @@
 
 .admin-panel-sidebar {
   width: 250px;
-  background-color: #46e641;
+  background-color: #3CB815;
   color: white;
   display: flex;
   flex-direction: column;
@@ -19,12 +19,11 @@
 .admin-panel-icon {
   text-align: center;
   margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
 }
 
-.admin-panel-icon-img {
-  max-width: 100px;
-  margin-bottom: 10px;
-}
+
 
 .admin-panel-sidebar h1 {
   font-size: 15px;
