@@ -1,0 +1,75 @@
+.ods-page-container { 
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.ods-page-diagram, .ods-page-ods {
+  width: 48%;
+}
+
+/* Estilos do diagrama de etapas */
+.ods-page-diagram {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ods-page-diagram h2 {
+  color: #2E7D32;
+  margin-bottom: 20px;
+}
+
+.ods-page-steps {
+  display: flex;
+  justify-content: center;
+}
+
+.ods-page-steps img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Estilos da seção ODS */
+.ods-page-ods {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.ods-page-ods h2 {
+  color: #2E7D32;
+  margin-bottom: 20px;
+}
+
+.ods-page-ods-goals {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ods-page-ods-goal {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.ods-page-ods-goal img {
+  width: 700px;
+  height: 200px;
+  margin-right: 15px;
+}
+
+.ods-page-ods-goal h3 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #2E7D32;
+}
+
+.ods-page-ods-goal p {
+  margin: 5px 0 0;
+  font-size: 0.95em;
+  color: #333;
+}

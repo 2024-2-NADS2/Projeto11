@@ -12,6 +12,7 @@ import CadastroPage from "./pages/CadastroPage";
 import { Routes, Route } from 'react-router-dom';
 import ColetaPage from "./pages/ColetaPage";
 import AdUsuarioPage from "./pages/AdUsuarioPage";
+import OdsPage from "./pages/OdsPage";
 
 const App = () => {
     return (
@@ -29,6 +30,7 @@ const App = () => {
                             <Navbar />
                             <HomePage />
                             <QuemSomosPage />
+                            <OdsPage/>
                             <InfoColetaPage />
                             <AgendePage />
                             <NoticiasPage />
