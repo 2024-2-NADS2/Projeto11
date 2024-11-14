@@ -47,9 +47,11 @@ const LoginPage = () => {
             .then(res => {
                 if (res.status === 200) {
                     const permissao = res.data.permissao;
-                    if (permissao === 'admin' || permissao === 'ong') {
-                        navigate('/adminPage');
-                    } else {
+                    if (permissao === 'admin') {
+                        navigate('/adUsuario');
+                    } else if (permissao === 'ong') {
+                        navigate('/atUsuario');
+                    }  else {
                         navigate('/coleta');
                     }
                 }
