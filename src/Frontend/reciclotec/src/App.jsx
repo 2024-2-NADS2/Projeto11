@@ -14,6 +14,7 @@ import ColetaPage from "./pages/ColetaPage";
 import AdUsuarioPage from "./pages/AdUsuarioPage";
 import OdsPage from "./pages/OdsPage";
 import AdAgendamentosPage from "./pages/AdAgendamentosPage";
+import AdAtualizarPage from "./pages/AdAtualizarPage";
 
 const App = () => {
     return (
@@ -24,6 +25,7 @@ const App = () => {
                 <Route path="/coleta" element={<ColetaPage/>} />
                 <Route path="/adUsuario" element={<AdUsuarioPage/>} />
                 <Route path="/adAgendamentos" element={<AdAgendamentosPage/>} />
+                <Route path="/adAtualizar" element={<AdAtualizarPage/>} />
 
                 <Route 
                     path="/" 

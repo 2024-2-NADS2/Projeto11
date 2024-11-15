@@ -47,9 +47,9 @@ const AdUsuarioPage = () => {
                     <h1>Painel Administrativo</h1>
                 </div>
                 <nav className="admin-panel-menu">
-                    <a href="/agendamento">Agendamentos</a>
+                    <a href="/adAgendamentos">Agendamentos</a>
                     <a href="/adUsuario">Cadastrar Usuários</a>
-                    <a href="/atUsuario">Atualizar Perfil</a>
+                    <a href="/adAtualizar">Atualizar Perfil</a>
                 </nav>
             </div>
 
