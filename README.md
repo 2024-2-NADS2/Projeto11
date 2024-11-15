@@ -14,11 +14,13 @@
 
 ## ✏ Introdução
 
+<div align="center">
+
 <img src="https://github.com/2024-1-NADS1-A/Projeto9/blob/main/imagens/ODS.jpg" alt="ODS" border="0">
 
+<a>Feito por</a> <a href="https://www.een-portugal.pt/news/PublishingImages/ODS.jpg?Width=500">Objetivos de Desenvolvimento Sustentável (ODS)</a>
+
 </div>
-  <a> Feito por<a> <a href="https://www.een-portugal.pt/news/PublishingImages/ODS.jpg?Width=500">Objetivos de Desenvolvimento Sustentável (ODS)</a>
-</p>
 
 <br> O projeto ReCicloTec é uma iniciativa que busca melhorar a gestão de lixo eletrônico por meio de uma plataforma digital. Ele aborda problemas como o descarte inadequado, falta de conscientização, infraestrutura insuficiente e desafios regulatórios. A plataforma oferece recursos educativos para aumentar a conscientização sobre a importância do descarte correto, além de otimizar a logística de coleta e reciclagem dos eletrônicos. Também informa sobre legislações pertinentes, ajudando a garantir a conformidade. Além disso, busca engajar a comunidade em torno da sustentabilidade, promovendo parcerias e campanhas que incentivem práticas responsáveis. A ReCicloTec visa, assim, contribuir para um futuro mais sustentável na gestão de resíduos eletrônicos. </br>
 
