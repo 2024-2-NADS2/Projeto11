@@ -13,9 +13,6 @@
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Valentea</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino Gomes</a>.
 
 ## ✏ Introdução
-![ods](https://github.com/2024-1-NADS1-A/Projeto9/blob/main/imagens/ODS.jpg)
-<p align="center">
-<div align="center">
 
 <img src="https://github.com/2024-1-NADS1-A/Projeto9/blob/main/imagens/ODS.jpg" alt="ODS" border="0">
 
