@@ -1,4 +1,5 @@
 import './parcerias.css';
+import ecobraz from '../../assets/img/ecobraz.jpg'
 
 const ParceriasPage = () => {
     return (
@@ -9,54 +10,24 @@ const ParceriasPage = () => {
                     <h1>Construindo Juntos um Futuro Sustentável</h1>
                 </div>
                 <div className="parcerias-container">
-                    {/* Parceria 1 - Generica */}
+                    {/* Parceria 1 - ECOBRAZ */}
                     <div className="box_parcerias">
                         <div className="review-profile">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png" alt="Microsoft Logo" />
-                            <h3>Microsoft</h3>
+                            <img src={ecobraz} alt="Logo Ecobraz" />
+                            <h3>Ecobraz Emigre</h3>
                         </div>
-                        {/* Texto Gerico */}
-                        <p>A Microsoft tem apoiado a reciclagem de lixo eletrônico através de várias iniciativas em todo o mundo, promovendo práticas sustentáveis e conscientizando o público.</p>
+                        <p>A Ecobraz Emigre é a maior organização de reciclagem de lixo eletrônico do mundo, pioneira na captação de CO₂ por meio da reciclagem. Com seu Centro de Pesquisa e Desenvolvimento Tecnológico, promove soluções inovadoras e sustentáveis. Apoie a Ecobraz: agende sua coleta de lixo eletrônico de forma rápida e sem custos.
+                        </p>
                         <div className="social-icons">
-                            <a href="#"><i className="bx bxl-facebook"></i></a>
-                            <a href="#"><i className="bx bxl-instagram"></i></a>
-                            <a href="#"><i className="bx bxl-linkedin"></i></a>
-                        </div>
-                    </div>
-
-                    {/* Parceria 2 - Generica */}
-                    <div className="box_parcerias">
-                        <div className="review-profile">
-                            <img src="https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.jpg" alt="Apple Logo" />
-                            <h3>Apple</h3>
-                        </div>
-                        {/* Texto Gerico */}
-                        <p>Com a iniciativa Apple Renew, a empresa busca incentivar seus clientes a devolver dispositivos antigos para reciclagem, ajudando a reduzir o impacto ambiental.</p>
-                        <div className="social-icons">
-                            <a href="#"><i className="bx bxl-facebook"></i></a>
-                            <a href="#"><i className="bx bxl-instagram"></i></a>
-                            <a href="#"><i className="bx bxl-linkedin"></i></a>
-                        </div>
-                    </div>
-
-                    {/* Parceria 3 - Generica */}
-                    <div className="box_parcerias">
-                        <div className="review-profile">
-                            <img src="https://img.icons8.com/?size=512&id=17949&format=png" alt="Google Logo" />
-                            <h3>Google</h3>
-                        </div>
-                        {/* Texto Gerico */}
-                        <p>O Google apoia organizações sem fins lucrativos para promover a reciclagem e reutilização de dispositivos eletrônicos, investindo em programas de sustentabilidade.</p>
-                        <div className="social-icons">
-                            <a href="#"><i className="bx bxl-facebook"></i></a>
-                            <a href="#"><i className="bx bxl-instagram"></i></a>
-                            <a href="#"><i className="bx bxl-linkedin"></i></a>
+                            <a href="https://www.youtube.com/@ecobrazemigre2500"><i className="bx bxl-youtube"></i></a>
+                            <a href="https://www.instagram.com/ecobrazemigre/"><i className="bx bxl-instagram"></i></a>
+                            <a href="https://ecobraz.org/"><i className="bx bx-globe"></i></a>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-    )
-}
+    );
+};
 
 export default ParceriasPage;
