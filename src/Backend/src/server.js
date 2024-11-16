@@ -5,6 +5,10 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
+const jwt = require('jsonwebtoken');
+const JWT_SECRET = 'reciclotec';
+
+
 const Usuario = require('./Usuario.js');
 const AgendamentoColeta = require('./AgendamentoColeta.js');
 
@@ -32,6 +36,60 @@ db.connect((err) => {
     }
 });
 
+function autenticarToken(req, res, next) {
+    const token = req.headers['authorization']?.split(' ')[1]; 
+
+    if (!token) {
+        return res.status(403).json('Token não fornecido');
+    }
+
+    jwt.verify(token, JWT_SECRET, (err, decoded) => {
+        if (err) {
+            return res.status(403).json('Token inválido ou expirado. Faça login novamente.');
+        }
+
+        req.user = decoded; 
+        next();
+    });
+}
+
+app.get('/perfil-administrador', (req, res) => {
+    const authHeader = req.headers['authorization'];
+
+    if (!authHeader) {
+        return res.status(401).json("Token não fornecido.");
+    }
+
+    const token = authHeader.split(' ')[1];
+    jwt.verify(token, JWT_SECRET, (err, decoded) => {
+        if (err) {
+            console.error('Erro ao verificar token:', err);
+            return res.status(403).json("Token inválido.");
+        }
+
+        console.log('Token decodificado:', decoded);
+        const { id, permissao } = decoded;
+
+        if (permissao !== 'admin' && permissao !== 'ong')  {
+            console.warn('Permissão negada para o ID:', id);
+            return res.status(403).json("Permissão negada.");
+        }
+
+        const sql = "SELECT id, nome, email, senha FROM administrador WHERE id = ?";
+        db.query(sql, [id], (err, result) => {
+            if (err) {
+                return res.status(500).json("Erro ao consultar o banco de dados.");
+            }
+
+            if (result.length === 0) {
+                return res.status(404).json("Administrador não encontrado.");
+            }
+
+            res.status(200).json(result[0]);
+        });
+    });
+});
+
 
 app.post('/login', (req, res) => {
     const sqlAdmin = "SELECT * FROM administrador WHERE email = ?";
@@ -42,7 +100,6 @@ app.post('/login', (req, res) => {
         return res.status(400).json("Por favor, forneça email e senha.");
     }
 
-    // Primeiro, fazer a verificação se o email existe no banco de dados
     db.query(sqlAdmin, [email], (err, adminResult) => {
         if (err) {
             return res.status(500).json("Erro ao consultar o banco de dados.");
@@ -56,13 +113,24 @@ app.post('/login', (req, res) => {
                 }
 
                 if (senhaCorreta) {
-                    return res.status(200).json({ message: "Login bem-sucedido", permissao: admin.permissao });
+
+                    const token = jwt.sign(
+                        { id: admin.id, email: admin.email, nome: admin.nome, permissao: admin.permissao },
+                        JWT_SECRET,
+                        { expiresIn: '2h' }
+                    );
+
+                    return res.status(200).json({
+                        message: "Login bem-sucedido",
+                        token,
+                        permissao: admin.permissao 
+                    });
                 } else {
                     return res.status(401).json("Senha incorreta.");
                 }
             });
         } else {
-            // Caso não seja administrador ou tenha permissao ong, consultar a tabela usuarios
+
             db.query(sqlUser, [email], (err, userResult) => {
                 if (err) {
                     return res.status(500).json("Erro ao consultar o banco de dados.");
@@ -79,7 +147,18 @@ app.post('/login', (req, res) => {
                     }
 
                     if (senhaCorreta) {
-                        return res.status(200).json({ message: "Login bem-sucedido", permissao: "usuario" });
+
+                        const token = jwt.sign(
+                            { id: user.id, email: user.email, nome: user.nome, permissao: 'usuario' },
+                            JWT_SECRET,
+                            { expiresIn: '2h' }
+                        );
+
+                        return res.status(200).json({
+                            message: "Login bem-sucedido",
+                            token,
+                            permissao: 'usuario' 
+                        });
                     } else {
                         return res.status(401).json("Senha incorreta.");
                     }
@@ -88,6 +167,47 @@ app.post('/login', (req, res) => {
         }
     });
 });
+
+app.put('/atualizar-perfil', autenticarToken, (req, res) => {
+    const { id } = req.user; 
+    const { nome, email, senha } = req.body;
+
+    if (!nome || !email) {
+        return res.status(400).json("Por favor, forneça nome e email.");
+    }
+
+    let queryValues = [nome, email, id];
+    let sqlAtualizar = "UPDATE administrador SET nome = ?, email = ? WHERE id = ?";
+
+    if (senha) {
+        bcrypt.hash(senha, 10, (err, hashedPassword) => {
+            if (err) {
+                return res.status(500).json("Erro ao hashear a senha.");
+            }
+
+            sqlAtualizar = "UPDATE administrador SET nome = ?, email = ?, senha = ? WHERE id = ?";
+            queryValues = [nome, email, hashedPassword, id];
+
+            db.query(sqlAtualizar, queryValues, (err, resultado) => {
+                if (err) {
+                    return res.status(500).json("Erro ao atualizar o perfil.");
+                }
+
+                return res.status(200).json("Perfil atualizado com sucesso.");
+            });
+        });
+    } else {
+
+        db.query(sqlAtualizar, queryValues, (err, resultado) => {
+            if (err) {
+                return res.status(500).json("Erro ao atualizar o perfil.");
+            }
+
+            return res.status(200).json("Perfil atualizado com sucesso.");
+        });
+    }
+});
+
 
 app.post('/cadastro-administrador', (req, res) => {
     const sqlInserirAdmin = "INSERT INTO administrador (nome, email, senha, empresa, permissao) VALUES (?, ?, ?, ?, ?)";
