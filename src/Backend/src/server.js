@@ -315,6 +315,49 @@ app.post('/agendamentoColeta', (req, res) => {
 });
 
 
+// Rota para listar os agendamentos associados ao administrador ou a ONG
+app.get('/visualizarAgendamentos', autenticarToken, (req, res) => {
+    const { id } = req.user; 
+
+    const sqlEmpresa = "SELECT empresa FROM administrador WHERE id = ?";
+    
+    db.query(sqlEmpresa, [id], (err, empresaResult) => {
+        if (err) {
+            console.error("Erro ao buscar empresa do administrador:", err);
+            return res.status(500).json("Erro ao consultar o banco de dados.");
+        }
+
+        if (empresaResult.length === 0) {
+            return res.status(404).json("Administrador não encontrado.");
+        }
+
+        const empresa = empresaResult[0].empresa;
+
+        const sqlAgendamentos = `
+            SELECT 
+                a.nome AS pessoa, 
+                a.email, 
+                a.dataAgendada, 
+                a.produto AS produtos
+                FROM agendamento AS a
+                WHERE a.ong = ?
+        `;
+
+        db.query(sqlAgendamentos, [empresa], (err, agendamentosResult) => {
+            if (err) {
+                console.error("Erro ao buscar agendamentos:", err);
+                return res.status(500).json("Erro ao consultar o banco de dados.");
+            }
+
+            if (agendamentosResult.length === 0) {
+                return res.status(404).json("Nenhum agendamento encontrado para esta empresa.");
+            }
+
+            return res.status(200).json(agendamentosResult);
+        });
+    });
+});
+
 
 // Rota para buscar um usuário ou agendamento com base em uma propriedade - Algoritmo de Busca de Dados com Proriedade Específica
 app.get('/buscar', (req, res) => {
