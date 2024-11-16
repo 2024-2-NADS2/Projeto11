@@ -4,7 +4,7 @@ import '../LoginPage/login.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-var url = 'https://mtrwdw-3000.csb.app';
+var url = 'http://localhost:3000';
 
 
 const LoginPage = () => {
@@ -46,27 +46,27 @@ const LoginPage = () => {
         axios.post(`${url}/login`, { email, senha })
             .then(res => {
                 if (res.status === 200) {
-                    const permissao = res.data.permissao;
+                    const { permissao, token } = res.data; 
+                    localStorage.setItem('adminToken', token); 
+
                     if (permissao === 'admin') {
-                        navigate('/adUsuario');
+                        navigate('/adAtualizar'); 
                     } else if (permissao === 'ong') {
-                        navigate('/atUsuario');
-                    }  else {
-                        navigate('/coleta');
+                        navigate('/adAtualizar'); 
+                    } else {
+                        navigate('/coleta'); 
                     }
                 }
             })
             .catch(err => {
                 if (err.response && err.response.status === 401) {
-                    // Email ou senha incorreta
                     window.alert('Email ou Senha Incorreta!');
                 } else {
-                    console.log(err);
+                    console.error(err);
                     window.alert('Ocorreu um erro. Tente novamente mais tarde.');
                 }
             });
     }
-
 
     return (
         <div>
