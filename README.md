@@ -10,7 +10,7 @@
 
 ## Integrantes: <a href="https://www.linkedin.com/in/alexandra-christine-silva-590092257">Alexandra Christine </a>, <a href="https://linkedin.com/in/hebert-/">Hebert dos Reis Esteves	</a>, <a href="https://www.linkedin.com/in/jos%C3%A9-almeida-80063a256/">José Bento Almeida Gama </a>, <a href="https://www.linkedin.com/in/gabrielly-cintra/">Gabrielly Cintra de Jesus	</a>.
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Valentea</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino Gomes</a>.
+## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Aimar</a>,         <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Francisco</a> <a href="https://www.linkedin.com/in/adriano-valente-534576135/">José Buesso</a> <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino Gomes</a>.
 
 ## ✏ Introdução
 
@@ -149,9 +149,9 @@ npm start
 * 0.13.13 - 27/10/2024
    * CONCLUÍDO: Fazer as Telas restantes em React para Entrega 3 (Alexandra, Gabrielly e José)
 * 0.14.14 - 06/11/2024
-   * ANDAMENTO: Terminar o site em React para Entrega 4 (Alexandra, Gabrielly e José)
+   * CONCLUÍDO: Terminar o site em React para Entrega 4 (Alexandra, Gabrielly e José)
 * 0.15.15 - 17/11/2024
-   * ANDAMENTO: Backend em .NET, orientado a objetos com banco de dados (Hebert e José)
+   * CONCLUÍDO: Backend em .NET, orientado a objetos com banco de dados (Hebert e José)
 * 0.16.16 - 17/11/2024
    * CONCLUÍDO: Subida do backend para Azure (Todos)
 * 0.17.17 - 18/11/2024
