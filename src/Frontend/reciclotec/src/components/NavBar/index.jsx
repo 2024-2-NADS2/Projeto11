@@ -9,6 +9,7 @@ const Navbar = () => {
                 <ul className="navbar">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">Quem Somos</a></li>
+                    <li><a href="#processo">Processo de Coleta</a></li>
                     <li><a href="#info">Informações de Coleta</a></li>
                     <li><a href="#agende">Agende sua Coleta</a></li>
                     <li><a href="#news">Notícias</a></li>

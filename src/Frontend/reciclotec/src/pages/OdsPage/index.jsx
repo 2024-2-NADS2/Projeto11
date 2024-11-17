@@ -6,7 +6,7 @@ import ods15 from '../../assets/img/ods15.jpg';
 
 const OdsPage = () => {
   return (
-    <div>
+    <div className="processo" id="processo">
         <div className="heading">
           <span>Compromisso com o Futuro</span>
           <h1>Coleta Responsável e Sustentabilidade</h1>
