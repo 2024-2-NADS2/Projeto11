@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './adAtualizar.css';
-var url = 'http://localhost:3000';
+var url = 'https://mtrwdw-3000.csb.app';
+// var url = 'http://localhost:3000';
 
 const AdminPanel = () => {
     const [nome, setNome] = useState('');
@@ -82,7 +83,6 @@ const AdminPanel = () => {
                 </div>
                 <nav className="admin-panel-menu">
                     <a href="/adAgendamentos">Agendamentos</a>
-                    <a href="/adUsuario">Cadastrar Usuários</a>
                     <a href="/adAtualizar">Atualizar Perfil</a>
                 </nav>
             </aside>

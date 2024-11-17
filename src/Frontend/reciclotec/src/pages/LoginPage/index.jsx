@@ -4,7 +4,8 @@ import '../LoginPage/login.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-var url = 'http://localhost:3000';
+var url = 'https://mtrwdw-3000.csb.app';
+// var url = 'http://localhost:3000';
 
 
 const LoginPage = () => {
@@ -55,7 +56,7 @@ const LoginPage = () => {
                     if (permissao === 'admin') {
                         setMessage('Login realizado com sucesso!');
                         setMessageType('success');
-                        setTimeout(() => navigate('/adAtualizar'), 2000); 
+                        setTimeout(() => navigate('/adUsuario'), 2000); 
                     } else if (permissao === 'ong') {
                         setMessage('Login realizado com sucesso!');
                         setMessageType('success');
