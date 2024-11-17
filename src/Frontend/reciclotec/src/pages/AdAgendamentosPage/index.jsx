@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../AdAgendamentosPage/adagendamentos.css';
+import '../AdAgendamentosPage/adAgendamentos.css';
 var url = 'http://localhost:3000';
 
 const AdAgendamentosPage = () => {
@@ -16,10 +16,8 @@ const AdAgendamentosPage = () => {
             Authorization: `Bearer ${token}`, 
           },
         });
-        console.log("Dados recebidos:", response.data);
         setAgendamentos(response.data);
       } catch (error) {
-        console.error('Erro ao carregar agendamentos:', error);
         setError('Erro ao carregar agendamentos.');
       }
     };
@@ -36,11 +34,11 @@ const AdAgendamentosPage = () => {
     })
     .then((response) => {
       console.log("Resposta do servidor ao confirmar:", response.data);
-      const { dataColetada, status } = response.data; // Captura os campos retornados
+      const { dataColetada, status } = response.data; 
       setAgendamentos((prev) =>
         prev.map((agendamento) =>
           agendamento.id_agendamento === idAgendamento
-            ? { ...agendamento, dataColetada, status } // Atualiza ambos os campos
+            ? { ...agendamento, dataColetada, status } 
             : agendamento
         )
       );
@@ -61,7 +59,6 @@ const AdAgendamentosPage = () => {
         </div>
         <nav className="admin-panel-menu">
           <a href="/adAgendamentos">Agendamentos</a>
-          <a href="/adUsuario">Cadastrar Usuários</a>
           <a href="/adAtualizar">Atualizar Perfil</a>
         </nav>
       </div>
