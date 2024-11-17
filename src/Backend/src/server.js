@@ -335,9 +335,11 @@ app.get('/visualizarAgendamentos', autenticarToken, (req, res) => {
 
         const sqlAgendamentos = `
             SELECT 
+                a.id_agendamento, 
                 a.nome AS pessoa, 
                 a.email, 
                 a.dataAgendada, 
+                a.status,
                 a.produto AS produtos
                 FROM agendamento AS a
                 WHERE a.ong = ?
@@ -354,6 +356,42 @@ app.get('/visualizarAgendamentos', autenticarToken, (req, res) => {
             }
 
             return res.status(200).json(agendamentosResult);
+        });
+    });
+});
+
+app.put('/confirmarAgendamentos', autenticarToken, (req, res) => {
+    const { idAgendamento } = req.body;
+
+    if (!idAgendamento) {
+        return res.status(400).json("ID do agendamento não fornecido.");
+    }
+
+    console.log("ID do agendamento recebido:", idAgendamento);
+
+    const dataAtual = new Date().toISOString().slice(0, 19).replace('T', ' ');
+
+    const sqlAtualizar = `
+        UPDATE agendamento 
+        SET dataColetada = ?, status = 'Concluído'
+        WHERE id_agendamento = ? AND dataColetada IS NULL
+    `;
+
+    db.query(sqlAtualizar, [dataAtual, idAgendamento], (err, result) => {
+        if (err) {
+            console.error("Erro ao atualizar o agendamento:", err);
+            return res.status(500).json("Erro ao atualizar o agendamento.");
+        }
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json("Agendamento não encontrado ou já concluído.");
+        }
+
+        // Retornando os dados atualizados ao frontend
+        res.status(200).json({
+            idAgendamento,
+            dataColetada: dataAtual,
+            status: 'Concluído',
         });
     });
 });

@@ -27,6 +27,31 @@ const AdAgendamentosPage = () => {
     fetchAgendamentos();
   }, []);
 
+  const confirmarAgendamento = (idAgendamento) => {
+    axios.put(`${url}/confirmarAgendamentos`, { idAgendamento }, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
+        'Content-Type': 'application/json'
+      }
+    })
+    .then((response) => {
+      console.log("Resposta do servidor ao confirmar:", response.data);
+      const { dataColetada, status } = response.data; // Captura os campos retornados
+      setAgendamentos((prev) =>
+        prev.map((agendamento) =>
+          agendamento.id_agendamento === idAgendamento
+            ? { ...agendamento, dataColetada, status } // Atualiza ambos os campos
+            : agendamento
+        )
+      );
+    })
+    .catch((error) => {
+      console.error("Erro ao concluir agendamento:", error);
+      alert("Erro ao confirmar o agendamento. Tente novamente.");
+    });
+  };
+  
+
   return (
     <div className="admin-panel-body">
       <div className="admin-panel-sidebar">
@@ -56,15 +81,19 @@ const AdAgendamentosPage = () => {
             </thead>
             <tbody>
               {agendamentos.length > 0 ? (
-                agendamentos.map((agendamento, index) => (
-                  <tr key={index}>
+                agendamentos.map((agendamento) => (
+                  <tr key={agendamento.id_agendamento}>
                     <td>{new Date(agendamento.dataAgendada).toLocaleDateString()}</td>
                     <td>{agendamento.pessoa}</td>
                     <td>{agendamento.email}</td>
                     <td>{agendamento.produtos}</td>
-                    <td>{agendamento.dataColeta != null ? 'Concluído' : 'Pendente'}</td> 
+                    <td>{agendamento.status}</td> 
                     <td>
-                      <button className="button-confirm">
+                      <button
+                        className="button-confirm"
+                        onClick={() => confirmarAgendamento(agendamento.id_agendamento)}
+                        disabled={agendamento.status === 'Concluído'} 
+                      >
                         <span>&#10003;</span>
                       </button>
                       <button className="button-delete">
@@ -72,13 +101,13 @@ const AdAgendamentosPage = () => {
                       </button>
                     </td>
                   </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="6">Nenhum agendamento encontrado</td>
-                </tr>
-              )}
-            </tbody>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan="6">Nenhum agendamento encontrado</td>
+                      </tr>
+                    )}
+              </tbody>
           </table>
         </div>
       </section>
