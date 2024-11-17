@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './adAtualizar.css';
 var url = 'https://mtrwdw-3000.csb.app';
-// var url = 'http://localhost:3000';
 
 const AdminPanel = () => {
     const [nome, setNome] = useState('');

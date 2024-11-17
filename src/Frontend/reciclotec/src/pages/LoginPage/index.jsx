@@ -5,7 +5,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 var url = 'https://mtrwdw-3000.csb.app';
-// var url = 'http://localhost:3000';
 
 
 const LoginPage = () => {
