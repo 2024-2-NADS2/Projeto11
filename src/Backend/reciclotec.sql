@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 29/10/2024 às 03:08
+-- Tempo de geração: 17/11/2024 às 19:27
 -- Versão do servidor: 8.0.40
 -- Versão do PHP: 8.2.18
 
@@ -24,12 +24,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `administrador`
+--
+
+DROP TABLE IF EXISTS `administrador`;
+CREATE TABLE IF NOT EXISTS `administrador` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  `empresa` varchar(255) NOT NULL,
+  `permissao` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `agendamento`
 --
 
 DROP TABLE IF EXISTS `agendamento`;
 CREATE TABLE IF NOT EXISTS `agendamento` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id_agendamento` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
   `cpf` varchar(11) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -37,15 +54,17 @@ CREATE TABLE IF NOT EXISTS `agendamento` (
   `cep` varchar(10) NOT NULL,
   `uf` varchar(2) NOT NULL,
   `cidade` varchar(255) NOT NULL,
+  `estado` varchar(200) NOT NULL,
   `endereco` varchar(255) NOT NULL,
   `numero` int NOT NULL,
   `complemento` varchar(100) NOT NULL,
   `bairro` varchar(255) NOT NULL,
-  `pontoColeta` varchar(255) NOT NULL,
+  `ong` varchar(255) NOT NULL,
   `produto` varchar(255) NOT NULL,
   `dataAgendada` date NOT NULL,
   `dataColetada` date DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `status` varchar(20) DEFAULT 'Pendente',
+  PRIMARY KEY (`id_agendamento`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -64,16 +83,6 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `senha` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Despejando dados para a tabela `usuarios`
---
-
-INSERT INTO `usuarios` (`id`, `nome`, `cpf`, `email`, `telefone`, `senha`) VALUES
-(4, 'Hebert', '90878362513', 'hebert@gmail.com', '1199987432', '$2b$10$xnao0spSo5Yxy4RcmvoOwe0xF9VjsvpxOSftNMWJ3PcTWODxcDz2i'),
-(11, 'Perla dos Reis Oliveira', '12311323123', 'perlla.sp@terra.com.br', '(11) 98607-7083', '$2b$10$RM/kMOwhDoJIdlGPXc5Xx./dM7VcIyyKBbdbT8y/9gsR5SWzJ2QkC'),
-(12, 'Neymar', '21031891283', 'ney@gmail.com', '1192318293291', '$2b$10$6HwlH4q5gYbAIsPwcFPXkeL86o8Z3rLMjmeVshKP3qGO1zSyFmF5K'),
-(13, 'TEREZO ESTEVES', '38917582390', 'terezo.sp@gmail.com', '11999525491', '$2b$10$ptvISdP8VBbngCKvcgjAOeU6JXDeWIAM1jXwFLVnaCvX.lrIdl7eS');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
