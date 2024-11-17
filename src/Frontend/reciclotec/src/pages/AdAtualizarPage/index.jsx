@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './adatualizar.css';
+import './adAtualizar.css';
 var url = 'http://localhost:3000';
 
 const AdminPanel = () => {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+    const [message, setMessage] = useState(''); 
+    const [messageType, setMessageType] = useState(''); 
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -42,7 +44,8 @@ const AdminPanel = () => {
         e.preventDefault();
 
         if (!nome || !email) {
-            alert('Por favor, forneça nome e email.');
+            setMessage('Por favor, forneça nome e email.');
+            setMessageType('error');
             return;
         }
 
@@ -53,8 +56,10 @@ const AdminPanel = () => {
                     'Authorization': `Bearer ${token}`,  
                 },
             });
-            alert(response.data);
-            navigate('/adAtualizar');  
+
+            setMessage('Atualizado realizado com sucesso!');
+            setMessageType('success');
+            navigate('/adAtualizar') ;
         } catch (error) {
             if (error.response) {
                 if (error.response.status === 403) {
@@ -86,6 +91,13 @@ const AdminPanel = () => {
                 <div className="admin-panel-container">
                     <h2 className="admin-panel-h2">Atualizar - Usuários</h2>
                     <p>Utilize o formulário para atualizar as informações de um usuário já existente.</p>
+
+                    {message && ( 
+                            <div className={`message ${messageType}`}>
+                                {message}
+                            </div>
+                    )}
+                        
                     <form onSubmit={handleSubmit} className="admin-panel-form">
                         <div className="admin-panel-form-group">
                             <label htmlFor="nome" className="admin-panel-label">Nome:</label>

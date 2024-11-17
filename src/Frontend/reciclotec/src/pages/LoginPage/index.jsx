@@ -41,6 +41,9 @@ const LoginPage = () => {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+    const [message, setMessage] = useState(''); 
+    const [messageType, setMessageType] = useState(''); 
+
     function handleSubmit(event) {
         event.preventDefault();
         axios.post(`${url}/login`, { email, senha })
@@ -50,21 +53,30 @@ const LoginPage = () => {
                     localStorage.setItem('adminToken', token); 
 
                     if (permissao === 'admin') {
-                        navigate('/adAtualizar'); 
+                        setMessage('Login realizado com sucesso!');
+                        setMessageType('success');
+                        setTimeout(() => navigate('/adAtualizar'), 2000); 
                     } else if (permissao === 'ong') {
-                        navigate('/adAtualizar'); 
+                        setMessage('Login realizado com sucesso!');
+                        setMessageType('success');
+                        setTimeout(() => navigate('/adAtualizar'), 2000);
                     } else {
-                        navigate('/coleta'); 
+                        setMessage('Login realizado com sucesso!');
+                        setMessageType('success');
+                        setTimeout(() => navigate('/coleta'), 2000);
                     }
                 }
             })
             .catch(err => {
                 if (err.response && err.response.status === 401) {
-                    window.alert('Email ou Senha Incorreta!');
+                    setMessage('Email ou Senha Incorreta!');
+                    setMessageType('error');
                 } else {
                     console.error(err);
-                    window.alert('Ocorreu um erro. Tente novamente mais tarde.');
+                    setMessage('Ocorreu um erro. Tente novamente mais tarde.');
+                    setMessageType('error');
                 }
+                
             });
     }
 
@@ -81,6 +93,13 @@ const LoginPage = () => {
                         <p className='p_login'>
                             Ainda não está cadastrado? <Link id="cadastro_login" to="/cadastro">Cadastre-se aqui</Link>
                         </p>
+
+                        {message && ( 
+                            <div className={`message ${messageType}`}>
+                                {message}
+                            </div>
+                        )}
+                        
                         <div className="input_div_login one_login">
                             <div className="i_login">
                                 <i className="fas fa-user"></i>

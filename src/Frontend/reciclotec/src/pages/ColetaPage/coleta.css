@@ -214,3 +214,23 @@
     font-size: 14px;
     color: var(--text-color);
 }
+
+.message {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.message.success {
+    color: var(--green-color);
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    color: #ec0d23;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}

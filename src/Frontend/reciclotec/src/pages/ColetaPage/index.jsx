@@ -8,6 +8,8 @@ var url = 'https://mtrwdw-3000.csb.app';
 
 const ColetaPage = () => {
     const navigate = useNavigate();
+    const [message, setMessage] = useState(''); 
+    const [messageType, setMessageType] = useState(''); 
     const [formData, setFormData] = useState({
         nome: '',
         cpf: '',
@@ -69,14 +71,13 @@ const ColetaPage = () => {
             await axios.post(`${url}/agendamentoColeta`, formFinal, {
                 headers: { 'Content-Type': 'application/json' }
             });
-
-            alert("Agendamento realizado com sucesso!");
-
-            navigate("/");
+        
+            setMessage("Agendamento realizado com sucesso!");
+            setMessageType('success');
+            setTimeout(() => navigate("/"), 2000); 
         } catch (error) {
-            alert("Erro ao realizar o agendamento, tente novamente.");
-
-            console.log(error);
+            setMessage("Erro ao realizar o agendamento, tente novamente.");
+            setMessageType('error');
         }
     };
     
@@ -102,6 +103,13 @@ const ColetaPage = () => {
                             <i className='bx bx-recycle'></i> ReCicloTec
                         </h2>
                         <h3 className="coleta-subtitle">Agendamento de Coleta</h3>
+
+                        {message && ( 
+                            <div className={`message ${messageType}`}>
+                                {message}
+                            </div>
+                        )}
+
                         <div className="form-grid">
                             <div className="input-group">
                                 <input 

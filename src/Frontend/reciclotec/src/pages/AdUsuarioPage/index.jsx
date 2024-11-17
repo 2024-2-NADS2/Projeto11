@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import icon from '../../assets/img/icon.png';
-import '../AdUsuarioPage/adusuario.css';
+import '../AdUsuarioPage/adUsuario.css';
 var url = 'https://mtrwdw-3000.csb.app';
 
 const AdUsuarioPage = () => {
     const navigate = useNavigate();
+    const [message, setMessage] = useState(''); 
+    const [messageType, setMessageType] = useState(''); 
     const [formData, setFormData] = useState({
         nome: '',
         email: '',
@@ -31,11 +33,12 @@ const AdUsuarioPage = () => {
                 headers: { 'Content-Type': 'application/json' }
             });
 
-            alert("Usuário cadastrado com sucesso!");
-            navigate("/");
+            setMessage("Usuário cadastrado com sucesso!");
+            setMessageType('success');
+            navigate('/adUsuario'); 
         } catch (error) {
-            alert("Erro ao cadastrar o usuário, tente novamente.");
-            console.error(error);
+            setMessage("Erro ao cadastrar o usuário, tente novamente.");
+            setMessageType('error');
         }
     };
 
@@ -57,6 +60,13 @@ const AdUsuarioPage = () => {
                 <div className="admin-panel-container">
                     <h2 className="admin-panel-h2">Cadastrar - Usuários</h2>
                     <p>Utilize o formulário para cadastrar um usuario. </p>
+
+                    {message && ( 
+                            <div className={`message ${messageType}`}>
+                                {message}
+                            </div>
+                    )}
+
                     <form onSubmit={handleSubmit} className="admin-panel-form">
                         <div className="admin-panel-form-group">
                             <label htmlFor="nome" className="admin-panel-label">Nome:</label>

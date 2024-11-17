@@ -44,30 +44,32 @@ const CadastroPage = () => {
     const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');
     const [senha, setSenha] = useState('');
+    const [message, setMessage] = useState(''); 
+    const [messageType, setMessageType] = useState(''); 
+
     function handleSubmit(event) {
         event.preventDefault();
-        axios.post(`${url}/cadastro`, {nome, cpf, email, telefone, senha})
+        axios.post(`${url}/cadastro`, { nome, cpf, email, telefone, senha })
             .then(res => {
-                console.log(res);
                 if (res.status === 200 || res.status === 201) {
-                    // Login bem-sucedido
-                    console.log("Cadastro bem-sucedido");
-                    navigate('/login');
+                    setMessage('Cadastro realizado com sucesso!');
+                    setMessageType('success');
+                    setTimeout(() => navigate('/login'), 2000); 
                 }
             })
             .catch(err => {
                 if (err.response) {
                     if (err.response.status === 401) {
-                        window.alert('Usuário já cadastrado ou dados incorretos.');
+                        setMessage('Usuário já cadastrado ou dados incorretos.');
                     } else if (err.response.status === 400) {
-                        window.alert('Dados incompletos ou inválidos.');
+                        setMessage('Dados incompletos ou inválidos.');
                     } else {
-                        window.alert('Ocorreu um erro. Tente novamente mais tarde.');
+                        setMessage('Ocorreu um erro. Tente novamente mais tarde.');
                     }
                 } else {
-                    console.log(err);
-                    window.alert('Erro de conexão. Tente novamente mais tarde.');
+                    setMessage('Erro de conexão. Tente novamente mais tarde.');
                 }
+                setMessageType('error');
             });
     }
 
@@ -82,6 +84,12 @@ const CadastroPage = () => {
                     <form onSubmit={handleSubmit}>
                         <h2 className="logo_cadastro"><i className='bx bx-recycle'></i> ReCicloTec</h2>
                         <h3>Cadastre-se</h3>
+
+                        {message && ( 
+                            <div className={`message ${messageType}`}>
+                                {message}
+                            </div>
+                        )}
                         
                         <div className="input_div_cadastro one_cadastro">
                             <div className="i_cadastro">

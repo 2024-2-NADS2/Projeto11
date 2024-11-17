@@ -153,8 +153,7 @@ form {
     font-weight: 600; 
 }
 
-.p_login,
-#cadastro_login {
+.p_login {
     display: inline;
     text-align: left;
     text-decoration: none;
@@ -163,9 +162,16 @@ form {
     transition: .3s;
 }
 
+#cadastro_login {
+    color: var(--green-color);
+    font-weight: bold; 
+    text-decoration: none;
+}
+
 .login_a:hover,
 #cadastro_login:hover {
     color: var(--green-color);
+    text-decoration: underline; 
 }
 
 .btn_login_custom {
@@ -197,4 +203,24 @@ form {
 .logo_login .bx {
     font-size: 35px;
     color: var(--green-color);
+}
+
+.message {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.message.success {
+    color: var(--green-color);
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    color: #ec0d23;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
 }
