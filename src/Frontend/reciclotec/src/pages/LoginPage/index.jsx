@@ -8,7 +8,6 @@ var url = 'https://mtrwdw-3000.csb.app';
 
 
 const LoginPage = () => {
-
     const navigate = useNavigate();
 
    useEffect(() => {
@@ -51,6 +50,7 @@ const LoginPage = () => {
                 if (res.status === 200) {
                     const { permissao, token } = res.data; 
                     localStorage.setItem('adminToken', token); 
+
 
                     if (permissao === 'admin') {
                         setMessage('Login realizado com sucesso!');
@@ -118,8 +118,8 @@ const LoginPage = () => {
                                 <input type="password" className="input" required onChange={e => setSenha(e.target.value)}/>
                             </div>
                         </div>
-                        <a className="login_a" href="#">Esqueceu a senha?</a>
-                        <input type="submit" className="btn_login_custom" value="Login" /> {/* Atualizado aqui */}
+                        <br/>
+                        <input type="submit" className="btn_login_custom botao" value="Login" /> 
                     </form>
                 </div>
             </div>

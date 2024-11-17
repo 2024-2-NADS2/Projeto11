@@ -19,7 +19,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 150px; /* Ajuste o valor conforme necessário */
+    margin-right: 150px;
 }
 
 .login_content {
@@ -191,6 +191,7 @@ form {
 	cursor: pointer;
 	transition: .5s;
 }
+
 
 .logo_login {
     font-weight: 600;
