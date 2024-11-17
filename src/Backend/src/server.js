@@ -396,6 +396,31 @@ app.put('/confirmarAgendamentos', autenticarToken, (req, res) => {
     });
 });
 
+app.delete('/deletarAgendamento', autenticarToken, (req, res) => {
+    const { idAgendamento } = req.body;
+
+    if (!idAgendamento) {
+        return res.status(400).json("ID do agendamento não fornecido.");
+    }
+
+    const sqlDeletar = `
+        DELETE FROM agendamento 
+        WHERE id_agendamento = ?
+    `;
+
+    db.query(sqlDeletar, [idAgendamento], (err, result) => {
+        if (err) {
+            console.error("Erro ao deletar o agendamento:", err);
+            return res.status(500).json("Erro ao deletar o agendamento.");
+        }
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json("Agendamento não encontrado.");
+        }
+
+        res.status(200).json({ message: "Agendamento deletado com sucesso." });
+    });
+});
 
 // Rota para buscar um usuário ou agendamento com base em uma propriedade - Algoritmo de Busca de Dados com Proriedade Específica
 app.get('/buscar', (req, res) => {

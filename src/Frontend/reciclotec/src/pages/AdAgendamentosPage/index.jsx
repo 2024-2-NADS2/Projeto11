@@ -48,7 +48,26 @@ const AdAgendamentosPage = () => {
       alert("Erro ao confirmar o agendamento. Tente novamente.");
     });
   };
-  
+
+  const deletarAgendamento = (idAgendamento) => {
+    axios.delete(`${url}/deletarAgendamento`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
+        'Content-Type': 'application/json'
+      },
+      data: { idAgendamento },  
+    })
+    .then((response) => {
+      console.log("Resposta do servidor ao deletar:", response.data);
+      setAgendamentos((prev) =>
+        prev.filter((agendamento) => agendamento.id_agendamento !== idAgendamento)
+      );
+    })
+    .catch((error) => {
+      console.error("Erro ao deletar o agendamento:", error);
+      alert("Erro ao deletar o agendamento. Tente novamente.");
+    });
+  };
 
   return (
     <div className="admin-panel-body">
@@ -93,18 +112,21 @@ const AdAgendamentosPage = () => {
                       >
                         <span>&#10003;</span>
                       </button>
-                      <button className="button-delete">
+                      <button
+                        className="button-delete"
+                        onClick={() => deletarAgendamento(agendamento.id_agendamento)}
+                      >
                         <span>&#10006;</span>
                       </button>
                     </td>
                   </tr>
-                      ))
-                    ) : (
-                      <tr>
-                        <td colSpan="6">Nenhum agendamento encontrado</td>
-                      </tr>
-                    )}
-              </tbody>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="6">Nenhum agendamento encontrado</td>
+                </tr>
+              )}
+            </tbody>
           </table>
         </div>
       </section>
