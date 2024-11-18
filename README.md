@@ -26,9 +26,9 @@
 
 ## 🔎 Descrição
 
-![projeto]([assets/logo-reciclotec.png](https://github.com/2024-2-NADS2/Projeto11/blob/main/src/Frontend/reciclotec/src/assets/img/home1.jpg))
+![projeto](https://github.com/2024-2-NADS2/Projeto11/blob/main/src/Frontend/reciclotec/src/assets/img/home1.jpg))
 <p align="center">
-<img src="![projeto](https://github.com/2024-2-NADS2/Projeto11/blob/main/src/Frontend/reciclotec/src/assets/img/home1.jpg)" border="0">
+<img src="![projeto](https://github.com/2024-2-NADS2/Projeto11/blob/main/src/Frontend/reciclotec/src/assets/img/home1.jpg)" ">
 
 O lixo eletrônico, que inclui dispositivos como computadores e celulares, apresenta sérios riscos ao meio ambiente e à saúde humana devido à presença de substâncias tóxicas, como metais pesados. O descarte inadequado desses materiais pode contaminar o solo e a água, afetando comunidades e a biodiversidade local. Além disso, a reciclagem e reutilização desses resíduos são essenciais para a economia circular, reduzindo a necessidade de novos recursos e promovendo a sustentabilidade.
 
