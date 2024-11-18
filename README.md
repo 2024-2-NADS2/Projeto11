@@ -10,7 +10,7 @@
 
 ## Integrantes: <a href="https://www.linkedin.com/in/alexandra-christine-silva-590092257">Alexandra Christine </a>, <a href="https://linkedin.com/in/hebert-/">Hebert dos Reis Esteves	</a>, <a href="https://www.linkedin.com/in/jos%C3%A9-almeida-80063a256/">José Bento Almeida Gama </a>, <a href="https://www.linkedin.com/in/gabrielly-cintra/">Gabrielly Cintra de Jesus	</a>.
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Aimar</a>,         <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Francisco</a> <a href="https://www.linkedin.com/in/adriano-valente-534576135/">José Buesso</a> <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino Gomes</a>.
+## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Martins Lopes</a>,         <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco Escobar</a>, <a href="https://www.linkedin.com/in/jbuesso/">José Buesso</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino Gomes</a>. 
 
 ## ✏ Introdução
 
@@ -70,7 +70,7 @@ Há também 4 pastas que seguem da seguinte forma:
 - ``Node.js``
 - ``MySQL``
 
-## 🛠 Instalação do React
+## 🛠 Instalação do depurador de Códigos (VSCODE)
 
 • Instale o VSCODE pelo Link oficial: 
 <br> <a href="https://code.visualstudio.com/download">Clique aqui para ir ao site oficial</a></br>
