@@ -69,6 +69,9 @@ Há também 4 pastas que seguem da seguinte forma:
 - ``React``
 - ``Node.js``
 - ``MySQL``
+- ``Axios``
+- ``React model``
+- ``Typecript``
 
 ## 🛠 Instalação do depurador de Códigos (VSCODE)
 
@@ -96,6 +99,8 @@ cd reciclotec
 npm install react-router-dom
 ````
 
+• Para instalar o Axios, que é uma biblioteca JavaScript para fazer requisições HTTP, siga os passos abaixo:
+
 ```sh
 npm install axios
 ````
@@ -106,8 +111,8 @@ npm install axios
 ```sh
 npm start
 ````
-
 • O projeto será aberto na seguinte URL: http://localhost:3001.
+
 
 ## 💻 Servidor Backend NodeJs - CodeSandBox
 🔗 https://codesandbox.io/p/devbox/reciclotec-mtrwdw
