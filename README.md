@@ -61,6 +61,7 @@ Há também 4 pastas que seguem da seguinte forma:
 ## 📖 Figma
 <br> 🛠 Link para o figma e guia de estilo</br>
 <br> <a href="https://www.figma.com/design/PH0VUWEN0xLxdPUShb7VVi/Untitled?node-id=0-1&t=5Had1jGuUzH7mpMt-1">Clique aqui para ver nosso protótipo</a></br>
+<br> 🛠 Desing System br> <a href="https://www.figma.com/design/PH0VUWEN0xLxdPUShb7VVi/Untitled?node-id=0-1&t=5Had1jGuUzH7mpMt-1">Clique aqui para ver nosso Desing System</a></br></br>
 
 ## 🖥️ Requisitos do sistema 
 - ``HTML``
