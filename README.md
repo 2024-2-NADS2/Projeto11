@@ -26,7 +26,7 @@
 
 ## 🔎 Descrição
 
-![projeto](https://github.com/2024-2-NADS2/Projeto11/blob/main/src/Frontend/reciclotec/src/assets/img/home1.jpg))
+![projeto](https://github.com/2024-2-NADS2/Projeto11/blob/main/src/Frontend/reciclotec/src/assets/img/home1.jpg)
 <p align="center">
 <img src="![projeto](https://github.com/2024-2-NADS2/Projeto11/blob/main/src/Frontend/reciclotec/src/assets/img/home1.jpg)">
 
