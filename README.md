@@ -76,6 +76,13 @@ Há também 4 pastas que seguem da seguinte forma:
 - ``React``
 - ``Node.js``
 - ``MySQL``
+
+## 🛠 Instalação do React
+
+• Instale o VSCODE pelo Link oficial: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjImo6p4OSJAxXJIbkGHW8LOaEQFnoECAsQAQ&url=https%3A%2F%2Fcode.visualstudio.com%2F&usg=AOvVaw15O90sm1ios8AUpw56hCml&opi=89978449 
+
+
+
 ## 🛠 Instalação do React
 
 • Instale o Node.js a partir do site oficial: [Node.js](https://nodejs.org/).
