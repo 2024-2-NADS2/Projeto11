@@ -60,14 +60,10 @@ Há também 4 pastas que seguem da seguinte forma:
 
 <b>src</b>: Pasta que contém o código fonte.
 
-## ✔️ Técnicas e tecnologias utilizadas
-
-
-
 
 ## 📖 Figma
 <br> 🛠 Link para o figma e guia de estilo</br>
-<br> <a href="https://www.figma.com/design/PH0VUWEN0xLxdPUShb7VVi/Untitled?node-id=0-1&t=5Had1jGuUzH7mpMt-1">Clique aqui para ver</a></br>
+<br> <a href="https://www.figma.com/design/PH0VUWEN0xLxdPUShb7VVi/Untitled?node-id=0-1&t=5Had1jGuUzH7mpMt-1">Clique aqui para ver nosso protótipo</a></br>
 
 ## 🖥️ Requisitos do sistema 
 - ``HTML``
@@ -79,8 +75,8 @@ Há também 4 pastas que seguem da seguinte forma:
 
 ## 🛠 Instalação do React
 
-• Instale o VSCODE pelo Link oficial: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjImo6p4OSJAxXJIbkGHW8LOaEQFnoECAsQAQ&url=https%3A%2F%2Fcode.visualstudio.com%2F&usg=AOvVaw15O90sm1ios8AUpw56hCml&opi=89978449 
-
+• Instale o VSCODE pelo Link oficial: 
+<br> <a href="https://code.visualstudio.com/download">Clique aqui para ir ao site oficial</a></br>
 
 
 ## 🛠 Instalação do React
@@ -121,11 +117,6 @@ npm start
 
 ## 💻 Aplicativo React - Hospedado no Netlify
 🔗 https://reciclotec.netlify.app/
-
-## ⚙C
-## ⚙
-## ⌨C
-## 💻
 
 
 ## 🗃 Histórico de lançamentos
