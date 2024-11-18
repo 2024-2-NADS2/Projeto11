@@ -71,14 +71,13 @@ Há também 4 pastas que seguem da seguinte forma:
 - ``Axios``
 - ``React model``
 - ``Typecript``
+## 🖥️ Ferramentas de Desenvolvimento
 
-## 🛠 Instalação do depurador de Códigos (VSCODE)
+# 🛠 Instalação do depurador de Códigos (VSCODE)
 
-• Instale o VSCODE pelo Link oficial: 
-<br> <a href="https://code.visualstudio.com/download">Clique aqui para ir ao site oficial</a></br>
+• Instale o VSCODE pelo Link oficial: <a href="https://code.visualstudio.com/download">Clique aqui para ir ao site oficial</a>
 
-
-## 🛠 Instalação do React
+# 🛠 Instalação do React
 
 • Instale o Node.js a partir do site oficial: [Node.js](https://nodejs.org/).
 
