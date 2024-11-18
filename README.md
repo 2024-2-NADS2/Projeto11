@@ -10,7 +10,7 @@
 
 ## 👥 Integrantes: <a href="https://www.linkedin.com/in/alexandra-christine-silva-590092257">Alexandra Christine </a>, <a href="https://linkedin.com/in/hebert-/">Hebert dos Reis Esteves	</a>, <a href="https://www.linkedin.com/in/jos%C3%A9-almeida-80063a256/">José Bento Almeida Gama </a>, <a href="https://www.linkedin.com/in/gabrielly-cintra/">Gabrielly Cintra de Jesus	</a>.
 
-## 👨‍🏫 Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Martins Lopes</a>,         <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco Escobar</a>, <a href="https://www.linkedin.com/in/jbuesso/">José Buesso</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino Gomes</a>. 
+## 👨‍🏫 Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Martins Lopes</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco Escobar</a>, <a href="https://www.linkedin.com/in/jbuesso/">José Buesso</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino Gomes</a>. 
 
 ## ✏ Introdução
 
@@ -19,9 +19,7 @@
 <img src="https://github.com/2024-1-NADS1-A/Projeto9/blob/main/imagens/ODS.jpg" alt="ODS" border="0">
 
 <a>Feito por</a> <a href="https://www.een-portugal.pt/news/PublishingImages/ODS.jpg?Width=500">Objetivos de Desenvolvimento Sustentável (ODS)</a>
-
 </div>
-
 <br> O projeto ReCicloTec é uma iniciativa que busca melhorar a gestão de lixo eletrônico por meio de uma plataforma digital. Ele aborda problemas como o descarte inadequado, falta de conscientização, infraestrutura insuficiente e desafios regulatórios. A plataforma oferece recursos educativos para aumentar a conscientização sobre a importância do descarte correto, além de otimizar a logística de coleta e reciclagem dos eletrônicos. Também informa sobre legislações pertinentes, ajudando a garantir a conformidade. Além disso, busca engajar a comunidade em torno da sustentabilidade, promovendo parcerias e campanhas que incentivem práticas responsáveis. A ReCicloTec visa, assim, contribuir para um futuro mais sustentável na gestão de resíduos eletrônicos. </br>
 
 ## 🔎 Descrição
@@ -59,9 +57,9 @@ Há também 4 pastas que seguem da seguinte forma:
 
 
 ## 📖 Figma
-<br> 🎨 Guia de estilo e Protótipo do Site</br> <br> <a href="https://www.figma.com/design/PH0VUWEN0xLxdPUShb7VVi/Untitled?node-id=0-1&t=5Had1jGuUzH7mpMt-1">Clique aqui para ver nosso Guia de estilo e Protótipo do Site</a></br>
+🎨 Guia de estilo e Protótipo do Site <a href="https://www.figma.com/design/PH0VUWEN0xLxdPUShb7VVi/Untitled?node-id=0-1&t=5Had1jGuUzH7mpMt-1">Clique aqui para ver nosso Guia de estilo e Protótipo do Site</a>
 
-<br> 🎨 Desing System br> <a href="https://www.figma.com/design/PH0VUWEN0xLxdPUShb7VVi/Untitled?node-id=0-1&t=5Had1jGuUzH7mpMt-1"> Clique aqui para ver nosso Desing System</a></br>
+🎨 Desing System <a href="https://www.figma.com/design/PH0VUWEN0xLxdPUShb7VVi/Untitled?node-id=0-1&t=5Had1jGuUzH7mpMt-1"> Clique aqui para ver nosso Desing System</a></br>
 
 ## 🖥️ Requisitos do sistema 
 - ``HTML``
