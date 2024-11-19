@@ -76,7 +76,7 @@ Há também 4 pastas que seguem da seguinte forma:
 - 🛠 Instalação do depurador de Códigos (VSCODE)
    • Instale o VSCODE pelo Link oficial: <a href="https://code.visualstudio.com/download">Clique aqui para ir ao site oficial</a>
    
-- 🗂️ Versionamento de Código
+- 🗂️ Versionamento de Código:
   <br>• Git: Sistema de controle de versão para gerenciar alterações, colaborar com a equipe e rastrear o histórico do projeto.<a href="https://git-scm.com/downloads"> Clique aqui para instalar o Git </a> </br>
  <br> • GitHub: Hospedagem de repositórios para gerenciamento de issues, pull requests e colaboração em equipe. </br>
  <br> • GitHub Desktop: <a href="https://desktop.github.com/download/"> Clique aqui para instalar o GitHub Desktop</a> </br>
@@ -171,12 +171,7 @@ npm start
 
 Aqui estão as referências usadas no projeto.
 
-1. 
-2.
-3. 
-4.
-5.
-7. 
-8. 
-9. 
-10. 
+1. GREEN ELETRON. Tudo o que você precisa saber sobre o lixo eletrônico. Disponível em: https://greeneletron.org.br/blog/tudo-o-que-voce-precisa-saber-sobre-o-lixo-eletronico/. Acesso em: 18 nov. 2024.
+2. ECOBRAZ. Ecobraz - Reciclagem de Eletrônicos e Sustentabilidade. Disponível em: https://ecobraz.org/pt_BR. Acesso em: 18 nov. 2024.
+3. SUCATA DIGITAL. Soluções em descarte sustentável de eletrônicos. Disponível em: https://sucatadigital.com.br. Acesso em: 18 nov. 2024.
+4. CNN BRASIL. Como descartar o lixo eletrônico? Disponível em: https://www.cnnbrasil.com.br/tecnologia/como-descartar-o-lixo-eletronico/. Acesso em: 18 nov. 2024.
