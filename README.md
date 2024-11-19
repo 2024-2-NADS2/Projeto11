@@ -113,6 +113,25 @@ npm start
 ````
 • O projeto será aberto na seguinte URL: http://localhost:3001.
 
+## ⛏️ Configuração Backend NodeJs - CodeSandBox
+- Acesse o CodeSandbox:
+Entre no [CodeSandbox](https://codesandbox.io) CodeSandbox.
+Faça login ou use como visitante (login permite salvar seus projetos).
+-Crie um novo projeto:
+Clique em "Create Sandbox".
+Escolha um template apropriado para seu site:
+HTML + CSS + JS: Ideal para sites estáticos.
+React, Vue, ou Svelte: Para aplicações baseadas em frameworks. (Estamos utilizando REACT)
+
+- Instalações:
+```sh
+npm install mysql2
+npm install cors
+````
+- Declarando as rotas:
+```sh
+
+````
 
 ## 💻 Servidor Backend NodeJs - CodeSandBox
 🔗 https://codesandbox.io/p/devbox/reciclotec-mtrwdw
