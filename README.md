@@ -130,6 +130,14 @@ npm install cors
 ````
 - Declarando as rotas:
 ```sh
+const express = require('express');
+const mysql = require('mysql2');
+const bcrypt = require('bcrypt');
+const cors = require('cors');
+const app = express();
+const port = process.env.PORT || 3000;
+
+const jwt = require('jsonwebtoken');
 
 ````
 
@@ -148,13 +156,15 @@ npm install cors
 * 0.3.3 - 02/10/2024
    * CONCLUÍDO: Criação do Layout e Prototipação no Figma (Alexandra)
 * 0.4.4 - 02/10/2024
-   * CONCLUÍDO: Entrega de Classes (José e Gabrielly)
+   * CONCLUÍDO: Entrega de Classes ( Gabrielly)
 * 0.5.5 - 02/10/2024
-   * CONCLUÍDO: Documento de Requisitos Funcionais, Não Funcionais e 3 Casos de Uso (Hebert e José)
+   * CONCLUÍDO: Documento de Requisitos Funcionais, Não Funcionais e 3 Casos de Uso (José)
 * 0.6.6 - 02/10/2024
    * CONCLUÍDO: Desenvolvimento do Site em React (Hebert)
 * 0.7.7 - 02/10/2024
-   * CONCLUÍDO: Criação do guia de estilo (Alexandra e Gabrielly)
+   * CONCLUÍDO: Criação do guia de estilo pt 1 (Alexandra )
+* 0.7.7 - 02/10/2024
+   * CONCLUÍDO: Criação do guia de estilo pt 2 ( Gabrielly)
 * 0.8.8 - 02/10/2024
    * CONCLUÍDO: Desenvolvimento da Home Page (HTML/CSS/JS) (Todos)
 * 0.9.9 - 02/10/2024
@@ -164,17 +174,19 @@ npm install cors
 * 0.11.11 - 27/10/2024
    * CONCLUÍDO: Incluir um sistema de autenticação (Login e Senha) (Hebert)
 * 0.12.12 - 27/10/2024
-   * CONCLUÍDO: Diagrama de Classe (Hebert e José)
+   * CONCLUÍDO: Diagrama de Classe ( José)
 * 0.13.13 - 27/10/2024
-   * CONCLUÍDO: Fazer as Telas restantes em React para Entrega 3 (Alexandra, Gabrielly e José)
+   * CONCLUÍDO: Fazer as Telas restantes em React para Entrega 3 ( Gabrielly )
 * 0.14.14 - 06/11/2024
-   * CONCLUÍDO: Terminar o site em React para Entrega 4 (Alexandra, Gabrielly e José)
+   * CONCLUÍDO: Terminar o site em React para Entrega 4 (Alexandra)
 * 0.15.15 - 17/11/2024
    * CONCLUÍDO: Backend em .NET, orientado a objetos com banco de dados (Hebert e José)
 * 0.16.16 - 17/11/2024
-   * CONCLUÍDO: Subida do backend para Azure (Todos)
-* 0.17.17 - 18/11/2024
-   * ANDAMENTO: Entrega do projeto (Todos)
+   * CONCLUÍDO: Subida do backend para Azure (Hebert)
+* 0.17.17  - 17/11/2024
+   * CONCLUÍDO: Arquitetura do Sitema (José)
+* 0.18.18 - 18/11/2024
+   * CONCLUÍDO: Entrega do projeto (Todos)
 
 
 
