@@ -73,26 +73,29 @@ Há também 4 pastas que seguem da seguinte forma:
 - ``Typecript``
 ## 🖥️ Ferramentas de Desenvolvimento
 
-# 🛠 Instalação do depurador de Códigos (VSCODE)
+- 🛠 Instalação do depurador de Códigos (VSCODE)
+   • Instale o VSCODE pelo Link oficial: <a href="https://code.visualstudio.com/download">Clique aqui para ir ao site oficial</a>
+   
+- 🗂️ Versionamento de Código
+  <br>• Git: Sistema de controle de versão para gerenciar alterações, colaborar com a equipe e rastrear o histórico do projeto.<a href="https://git-scm.com/downloads"> Clique aqui para instalar o Git </a> </br>
+ <br> • GitHub: Hospedagem de repositórios para gerenciamento de issues, pull requests e colaboração em equipe. </br>
+ <br> • GitHub Desktop: <a href="https://desktop.github.com/download/"> Clique aqui para instalar o GitHub Desktop</a> </br>
+- 🛠 Instalação do React
 
-• Instale o VSCODE pelo Link oficial: <a href="https://code.visualstudio.com/download">Clique aqui para ir ao site oficial</a>
+  • Instale o Node.js a partir do site oficial: [Node.js](https://nodejs.org/).
 
-# 🛠 Instalação do React
-
-• Instale o Node.js a partir do site oficial: [Node.js](https://nodejs.org/).
-
-• No terminal, execute o comando para criar um novo projetoReact:
+  • No terminal, execute o comando para criar um novo projetoReact:
 
 ```sh
 npx create-react-app reciclotec
 ````
 
-• Entre no diretório do projeto:
+  • Entre no diretório do projeto:
 ```sh
 cd reciclotec
 ````
 
-• Instale as dependências do projeto:
+- 🖥️ Instale as dependências do projeto:
 ```sh
 npm install react-router-dom
 ````
@@ -103,7 +106,7 @@ npm install react-router-dom
 npm install axios
 ````
 
-⚙ Configuração do Projeto
+- ⚙ Configuração do Projeto
 
 • Inicie o servidor de desenvolvimento com o comando:
 ```sh
