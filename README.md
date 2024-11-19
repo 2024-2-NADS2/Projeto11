@@ -68,9 +68,8 @@ Há também 4 pastas que seguem da seguinte forma:
 - ``React``
 - ``Node.js``
 - ``MySQL``
-- ``Axios``
-- ``React model``
-- ``Typecript``
+
+
 ## 🖥️ Ferramentas de Desenvolvimento
 
 - 🛠 Instalação do depurador de Códigos (VSCODE)
