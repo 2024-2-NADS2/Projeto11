@@ -78,7 +78,7 @@ Há também 4 pastas que seguem da seguinte forma:
 - 🗂️ Versionamento de Código:
   <br>• Git: Sistema de controle de versão para gerenciar alterações, colaborar com a equipe e rastrear o histórico do projeto.<a href="https://git-scm.com/downloads"> Clique aqui para instalar o Git </a> </br>
  <br> • GitHub: Hospedagem de repositórios para gerenciamento de issues, pull requests e colaboração em equipe. </br>
- <br> • GitHub Desktop: <a href="https://desktop.github.com/download/"> Clique aqui para instalar o GitHub Desktop</a> </br>
+ <br> • GitHub Desktop: Aplicativo gráfico que facilita o uso do Git e a interação com repositórios no GitHub, sem a necessidade de comandos no terminal. Ele permite gerenciar branches, commits, merges e pull requests de forma intuitiva. <a href="https://desktop.github.com/download/"> Clique aqui para instalar o GitHub Desktop</a> </br>
 - 🛠 Instalação do React
 
   • Instale o Node.js a partir do site oficial: [Node.js](https://nodejs.org/).
