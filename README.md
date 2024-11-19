@@ -127,6 +127,8 @@ npm start
 ```sh
 npm install mysql2
 npm install cors
+npm install bcrypt
+npm install jsonwebtoken
 ````
 - Declarando as rotas:
 ```sh
@@ -139,6 +141,11 @@ const port = process.env.PORT || 3000;
 
 const jwt = require('jsonwebtoken');
 
+````
+
+- Rodar o codigo Backend no CodeSandBox:
+```sh
+node src/index.js
 ````
 
 ## 💻 Servidor Backend NodeJs - CodeSandBox
