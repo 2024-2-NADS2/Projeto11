@@ -114,14 +114,14 @@ npm start
 • O projeto será aberto na seguinte URL: http://localhost:3001.
 
 ## ⛏️ Configuração Backend NodeJs - CodeSandBox
-- Acesse o CodeSandbox:
-Entre no [CodeSandbox](https://codesandbox.io) CodeSandbox.
-Faça login ou use como visitante (login permite salvar seus projetos).
--Crie um novo projeto:
-Clique em "Create Sandbox".
-Escolha um template apropriado para seu site:
-HTML + CSS + JS: Ideal para sites estáticos.
-React, Vue, ou Svelte: Para aplicações baseadas em frameworks. (Estamos utilizando REACT)
+<br>- Acesse o CodeSandbox:</br>
+<br>Entre no [CodeSandbox](https://codesandbox.io) CodeSandbox. </br>
+<br>Faça login ou use como visitante (login permite salvar seus projetos).</br>
+<br>-Crie um novo projeto:</br>
+<br>Clique em "Create Sandbox".</br>
+<br>Escolha um template apropriado para seu site:</br>
+<br>HTML + CSS + JS: Ideal para sites estáticos.</br>
+<br>React, Vue, ou Svelte: Para aplicações baseadas em frameworks. (Estamos utilizando REACT)</br>
 
 - Instalações:
 ```sh
