@@ -125,6 +125,7 @@ npm start
 
 - Instalações:
 ```sh
+npm install express
 npm install mysql2
 npm install cors
 npm install bcrypt
